@@ -1,0 +1,150 @@
+.about {
+	width: 100%;
+	background: rgba(249, 250, 251, 1);
+	
+.about-container {
+	display: flex;
+	flex-direction: column;
+  padding-top: 96px;
+	padding-bottom: 96px;
+	width: 100%;
+
+	> span {
+		width: 105px;
+		height: 28px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		margin: auto;
+		font-size: 14px;
+		border-radius: 12px;
+		background-color: rgba(229, 231, 235, 1);
+	}
+
+	.about_text {
+		display: flex;
+		justify-content: space-between;
+		margin-top: 40px;
+
+		.about-image {
+			width: 100%;
+			height: 520px;
+
+			> img {
+				width: 440px;
+				height: 520px;
+			}
+		}
+		.about_texture {
+			width: 100%;
+			display: flex;
+			flex-direction: column;
+			row-gap: 20px;
+
+			p {
+				color: rgba(75, 85, 99, 1);
+				font-weight: 400;
+			}
+			> .quick {
+				width: 100%;
+				display: flex;
+				justify-content: space-between;
+
+				> ul {
+					width: 100%;
+					padding-left: 23px;
+					color: rgba(75, 85, 99, 1);
+					font-weight: 400;
+
+					> li + li {
+						padding-top: 10px;
+					}
+				}
+			}
+		}
+	}
+	@media only screen and (min-width: 993px) and (max-width: 1100px) {
+		.about_text > .about-image {
+			width: 100%;
+			height: 520px;
+
+			> img {
+				width: 380px;
+				height: 520px;
+			}
+		}
+	}
+	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		.about_text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 20px;
+
+			> .about-image {
+				width: 100%;
+				height: 520px;
+				display: flex;
+				justify-content: center;
+
+			> img {
+				width: 440px;
+				height: 520px;
+			}
+			}
+		}
+	}
+	}
+	@media only screen and (min-width: 374px) and (max-width: 767px) {
+		.about-container {
+			padding: 2rem;
+		
+		.about_text {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			row-gap: 20px;
+
+			> .about-image {
+				width: 100%;
+				height: 520px;
+				display: flex;
+				justify-content: center;
+
+			> img {
+				width: 440px;
+				height: 520px;
+			}
+		}
+		.about_texture {
+			width: 100%;
+			text-align: start;
+		}
+		}
+	}
+}
+@media only screen and (max-width: 373px) {
+	.about-container {
+		padding: 2rem;
+	
+	.about_text {
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
+		row-gap: 20px;
+
+		> .about-image {
+			width: 100%;
+			height: 520px;
+			display: flex;
+			justify-content: center;
+
+		> img {
+			width: 300px;
+			height: 520px;
+		}
+	}
+	}
+}
+}
+}

@@ -1,0 +1,238 @@
+header {
+  overflow: hidden;
+  width: 100%;
+}
+header .header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  height: 68px;
+}
+header .header .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 10px;
+     -moz-column-gap: 10px;
+          column-gap: 10px;
+}
+header .header .nav > nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 20px;
+     -moz-column-gap: 20px;
+          column-gap: 20px;
+  border-width: 100%;
+  border-right: 1px solid lightgray;
+  padding-right: 20px;
+}
+header .header .nav > nav > a {
+  text-decoration: none;
+  color: rgb(75, 85, 99);
+}
+@media screen and (max-width: 800px) {
+  header .header .nav {
+    display: none;
+  }
+  header .header .header_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+header .header .header_nav {
+  width: 250px;
+  height: 100vh;
+  display: none;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  right: 0;
+  background-color: white;
+  -webkit-box-shadow: -10px 0 10px rgb(0, 0, 0);
+          box-shadow: -10px 0 10px rgb(0, 0, 0);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  padding: 10px 10px;
+  row-gap: 25px;
+}
+header .header .header_nav > .icon {
+  width: 30px;
+  height: 30px;
+}
+header .header .header_nav > nav {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: start;
+  row-gap: 20px;
+}
+header .header .header_nav > nav > a {
+  text-decoration: none;
+  color: rgb(75, 85, 99);
+}
+header .header .header_nav .nav_title {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+header .header .header_nav .nav_title > .icon > img {
+  width: 30px;
+  height: 30px;
+}
+header .header .header_nav .nav_title .close_btn {
+  width: 30px;
+  height: 30px;
+}
+header .header .header_nav .nav_title .close_btn > img {
+  width: 30px;
+  height: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 30px;
+}
+header .header .download {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
+}
+header .header .download > button {
+  width: 136px;
+  background: #000;
+  border-radius: 12px;
+  color: white;
+}
+header .header_menu {
+  display: none;
+}
+@media screen and (max-width: 374px) {
+  header .header {
+    width: 100%;
+    padding: 0 1rem;
+  }
+  header .header .header_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .header .download {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+  header .header .download > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .header .download > .button {
+    width: 100%;
+  }
+  header .header .download > .button > button {
+    width: 100%;
+    height: 36px;
+    background: #000;
+    border-radius: 12px;
+    color: white;
+  }
+}
+@media screen and (min-width: 375px) and (max-width: 800px) {
+  header .header_menu {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  header .download {
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    row-gap: 20px;
+  }
+  header .download > div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  header .download > .button {
+    width: 100%;
+  }
+  header .download > .button > button {
+    width: 100%;
+    height: 36px;
+    background: #000;
+    border-radius: 12px;
+    color: white;
+  }
+}
+@media screen and (min-width: 678px) and (max-width: 992px) {
+  header .header {
+    width: 100%;
+    padding: 0 2rem;
+  }
+}
