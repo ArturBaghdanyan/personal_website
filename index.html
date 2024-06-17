@@ -8,59 +8,59 @@
 </head>
 <body>
     
-		 <header>
-			<div class="header container">
+<header>
+	<div class="header container">
 
-				<div class="title">
+		<div class="title">
+			<img src="assets/favicon.ico" alt="favicon">
+		</div>
+
+		<div class="nav">
+			<nav>
+				<a href="/html/about.html" target="_blank">About</a>
+				<a href="/html/work.html" target="_blank">Work</a>
+				<a href="/html/testimonials.html" target="_blank">Testimonials</a>
+				<a href="/html/contact.html" target="_blank">Contact</a>
+			</nav>
+			<div class="download">
+				<img src="assets/header/mode.svg" alt="mode">
+				<button>Download CV</button>
+			</div>
+		</div>
+
+		<div class="header_nav" id="header-nav">
+			<div class="nav_title">
+				<div class="icon">
 					<img src="assets/favicon.ico" alt="favicon">
 				</div>
-
-				<div class="nav">
-					<nav>
-						<a href="/html/about.html" target="_blank">About</a>
-						<a href="/html/work.html" target="_blank">Work</a>
-						<a href="/html/testimonials.html" target="_blank">Testimonials</a>
-						<a href="/html/contact.html" target="_blank">Contact</a>
-					</nav>
-					<div class="download">
+				<span class="close_btn" onclick="hideSidebar()">
+					<img src="assets/header/close.svg" alt="menu">
+				</span>
+			</div>
+			
+			<nav>
+				<a href="/html/about.html" target="_blank">About</a>
+				<a href="/html/work.html" target="_blank">Work</a>
+				<a href="/html/testimonials.html" target="_blank">Testimonials</a>
+				<a href="/html/contact.html" target="_blank">Contact</a>
+			</nav>
+				<div class="download">
+					<div>
+						<span>Switch theme</span>
 						<img src="assets/header/mode.svg" alt="mode">
+					</div>
+					<div class="button">
 						<button>Download CV</button>
 					</div>
 				</div>
+		</div>
 
-				<div class="header_nav" id="header-nav">
-					<div class="nav_title">
-						<div class="icon">
-							<img src="assets/favicon.ico" alt="favicon">
-						</div>
-						<span class="close_btn" onclick="hideSidebar()">
-							<img src="assets/header/close.svg" alt="menu">
-						</span>
-					</div>
-					
-					<nav>
-						<a href="/html/about.html" target="_blank">About</a>
-						<a href="/html/work.html" target="_blank">Work</a>
-						<a href="/html/testimonials.html" target="_blank">Testimonials</a>
-						<a href="/html/contact.html" target="_blank">Contact</a>
-					</nav>
-						<div class="download">
-							<div>
-								<span>Switch theme</span>
-								<img src="assets/header/mode.svg" alt="mode">
-							</div>
-							<div class="button">
-								<button>Download CV</button>
-							</div>
-						</div>
-				</div>
+		<div class="header_menu" id="mobile-menu" onclick="showSideBar()">
+			<img src="assets/header/menu.svg" alt="close-button">
+		</div>
 
-				<div class="header_menu" id="mobile-menu" onclick="showSideBar()">
-					<img src="assets/header/menu.svg" alt="close-button">
-				</div>
-
-			</div>
-		</header>
+	</div>
+</header>
 
 		<main>
 			<div class="personal container">
@@ -172,8 +172,97 @@
 				<div id="my-skills" class="skills_name"></div>
 			</section>
 
-			<section class="experience"></section>
-			<section class="work"></section>
+			<section class="experience">
+				<span>Experience</span>
+				<p>Here is a quick summary of my most recent experiences:</p>
+
+				<div class="columns">
+					<div class="columns_piece">
+						<div class="image_container">
+							<img src="assets/upwork.svg" alt="upwork">
+						</div>
+						<div class="columns_piece_text">
+							<h3>Frontend Developer</h3>
+							<ul>
+								<li>
+									Developed the frontend interface for the Garant Logistics project, a
+									comprehensive logistics management system. 
+								</li>
+								<li>
+									Utilized a combination to create a userfriendly 
+									and responsive web application.
+								</li>
+								<li>
+									Implemented responsive design principles using Bootstrap framework
+									to ensure compatibility across various devices and screen sizes.
+								</li>
+								<li>
+									Enhanced user interactions and dynamic content using JavaScript
+									and jQuery libraries.
+								</li>
+							</ul>
+						</div>
+						<div class="months_duration">Feb 2024 - May 2024</div>
+					</div>
+					<div class="columns_piece">
+						<div class="image_container">
+							<img src="assets/upwork.svg" alt="upwork">
+						</div>
+						<div class="columns_piece_text">
+							<h3>Junior React JS developer</h3>
+							<ul>
+								<li>
+									I collaborated with a team of developers to build a property fraud
+									app using React with Typescript and Tailwind CSS.
+								</li>
+								<li>
+									Led the creation of a full-scale CRM System Platform, showcasing
+									leadership and project management abilities.
+								</li>
+								<li>
+									I made a system to track sales. It talks to the server to get, create,
+									update, and delete tasks.
+								</li>
+								<li>
+									 Also, I made the interface look good with
+									Tailwind CSS.
+								</li>
+							</ul>
+						</div>
+						<div class="months_duration">Dec 2022 - Jun 2023</div>
+					</div>
+					<div class="columns_piece">
+						<div class="image_container">
+							<img src="assets/upwork.svg" alt="upwork">
+						</div>
+						<div class="columns_piece_text">
+							<h3>Front End developer</h3>
+							<ul>
+								<li>
+									Developed custom PDF templates using HTML, CSS, and JavaScript
+									for generating dynamic and visually appealing PDF documents.
+								</li>
+							</ul>
+						</div>
+						<div class="months_duration">Jun 2022 — Jan 2023</div>
+					</div>
+				</div>
+			</section>
+
+
+
+			<section class="work">
+				<span></span>
+				<h3></h3>
+				<div>
+					<div>
+						<div></div>
+						<div></div>
+					</div>
+					<div></div>
+					<div></div>
+				</div>
+			</section>
 		</main>
 
 
