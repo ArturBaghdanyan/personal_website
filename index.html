@@ -3,7 +3,16 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+	<meta property="og:title" content="My Page Title" />
+    <meta property="og:description" content="My Page Description" />
+    <meta property="og:image" content="https://example.com/image.jpg" />
+    <meta property="og:url" content="https://example.com/" />
+    <meta property="og:type" content="website" />
+    <meta name="keywords" content="HTML CSS JavaScript" />
+    <meta name="description" content="This is the description" />
+    <meta name="author" content="Your Name" />
+    <title>Personial portfolio website</title>
+	<link rel="icon" type="image/x-icon" href="/assets/favicon.ico">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -12,7 +21,7 @@
 	<div class="header container">
 
 		<div class="title">
-			<img src="assets/favicon.ico" alt="favicon">
+			<img src="assets/images/header/tt.svg" alt="tt">
 		</div>
 
 		<div class="nav">
@@ -23,7 +32,7 @@
 				<a href="/html/contact.html" target="_blank">Contact</a>
 			</nav>
 			<div class="download">
-				<img src="assets/header/mode.svg" alt="mode">
+				<img src="assets/images/header/mode.svg" alt="mode">
 				<button>Download CV</button>
 			</div>
 		</div>
@@ -34,7 +43,7 @@
 					<img src="assets/favicon.ico" alt="favicon">
 				</div>
 				<span class="close_btn" onclick="hideSidebar()">
-					<img src="assets/header/close.svg" alt="menu">
+					<img src="assets/images/header/close.svg" alt="menu">
 				</span>
 			</div>
 			
@@ -47,7 +56,7 @@
 				<div class="download">
 					<div>
 						<span>Switch theme</span>
-						<img src="assets/header/mode.svg" alt="mode">
+						<img src="assets/images/header/mode.svg" alt="mode">
 					</div>
 					<div class="button">
 						<button>Download CV</button>
@@ -56,7 +65,7 @@
 		</div>
 
 		<div class="header_menu" id="mobile-menu" onclick="showSideBar()">
-			<img src="assets/header/menu.svg" alt="close-button">
+			<img src="assets/images/header/menu.svg" alt="close-button">
 		</div>
 
 	</div>
@@ -79,29 +88,29 @@
 					</div>
 					<div class="location">
 						<div>
-							<img src="assets/personal/location.svg" alt="location">
+							<img src="assets/images/personal/location.svg" alt="location">
 							<span>Yerevan, Armenia</span>
 						</div>
 						<div>
-							<img src="assets/personal/avialable.svg" alt="avialable">
+							<img src="assets/images/personal/avialable.svg" alt="avialable">
 							<span>Available for new projects</span>
 						</div>
 					</div>
 
 					<div class="sites">
 						<a href="">
-							<img src="assets/personal/github.svg" alt="github">
+							<img src="assets/images/personal/github.svg" alt="github">
 						</a>
 						<a href="">
-							<img src="assets/personal/telegram.svg" alt="telegram">
+							<img src="assets/images/personal/telegram.svg" alt="telegram">
 						</a>
 						<a href="">
-							<img src="assets/personal/slack.svg" alt="slack">
+							<img src="assets/images/personal/slack.svg" alt="slack">
 						</a>
 					</div>
 				</div>
 				<div class="image">
-					<img src="assets/personal/personal-image.jpg" alt="personal-image">
+					<img src="assets/images/personal/personal-image.jpg" alt="personal-image">
 				</div>
 			</div>
 
@@ -111,7 +120,7 @@
 
 					<div class="about_text">
 						<div class="about-image">
-							<img src="assets/personal/personal-image.jpg" alt="personal-image">
+							<img src="assets/images/personal/personal-image.jpg" alt="personal-image">
 						</div>
 						<div class="about_texture">
 							<h1>Curious about me? Here you have it:</h1>
@@ -166,20 +175,25 @@
 			</div>
 		</div>
 
-			<section class="skills container">
+		<section class="skills container">
+			<div class="skills_title">
 				<span>Skills</span>
 				<h3>The skills, tools and technologies I am really good at:</h3>
-				<div id="my-skills" class="skills_name"></div>
-			</section>
+			</div>
+			
+			<div id="my-skills" class="skills_name"></div>
+		</section>
 
 			<section class="experience">
-				<span>Experience</span>
-				<p>Here is a quick summary of my most recent experiences:</p>
-
+				<div class="experience_title">
+					<span>Experience</span>
+					<p>Here is a quick summary of my most recent experiences:</p>
+				</div>
+				
 				<div class="columns">
 					<div class="columns_piece">
 						<div class="image_container">
-							<img src="assets/upwork.svg" alt="upwork">
+							<img src="assets/images/upwork.svg" alt="upwork">
 						</div>
 						<div class="columns_piece_text">
 							<h3>Frontend Developer</h3>
@@ -206,7 +220,7 @@
 					</div>
 					<div class="columns_piece">
 						<div class="image_container">
-							<img src="assets/upwork.svg" alt="upwork">
+							<img src="assets/images/upwork.svg" alt="upwork">
 						</div>
 						<div class="columns_piece_text">
 							<h3>Junior React JS developer</h3>
@@ -233,7 +247,7 @@
 					</div>
 					<div class="columns_piece">
 						<div class="image_container">
-							<img src="assets/upwork.svg" alt="upwork">
+							<img src="assets/images/upwork.svg" alt="upwork">
 						</div>
 						<div class="columns_piece_text">
 							<h3>Front End developer</h3>
@@ -250,23 +264,136 @@
 			</section>
 
 
+			<!-- work section@ vor pages sax responsive normal araca, menak es mek@ 
+			 chstacvec etqan lav, mnacac@ karas obshi sax nayes nor es mek@ karas 
+			 nayes inch@ lav chi linum -->
 
-			<section class="work">
-				<span></span>
-				<h3></h3>
-				<div>
-					<div>
-						<div></div>
-						<div></div>
+			<section class="container">
+				<div class="work">
+					<div class="work_title">
+						<span>Work</span>
+						<p>Some of the noteworthy projects I have built:</p>
 					</div>
-					<div></div>
-					<div></div>
+					<div id="projects" class="projects_column"></div>
 				</div>
 			</section>
+
+			<section style="background-color: rgba(249, 250, 251, 1);">
+				<div class="testimionals">
+					<div class="testimionals_title">
+						<span>Testiminoals</span>
+						<p>Nice things people have said about me:</p>
+					</div>
+					<div class="testimionals_row">
+						<div class="testimionals_row_piece">
+							<div class="avatar">
+								<img src="assets/images/avatar.svg" alt="avatar">
+							</div>
+							<p>
+								“Job well done! I am really impressed. He is very very good at 
+								what he does :) I would recommend Sagar and will rehire in 
+								the future for Frontend development.”
+							</p>
+							<div class="testimionals_name">
+								<h3>John Doe</h3>
+								<span>Founder - xyz.com</span>
+							</div>
+						</div>
+						<div class="testimionals_row_piece">
+							<div class="avatar">
+								<img src="assets/images/avatar.svg" alt="avatar">
+							</div>
+							<p>
+								“Great guy, highly recommended for any COMPLEX front-end development 
+								job! His skills are top-notch and he will be an amazing addition to 
+								any team.”
+							</p>
+							<div class="testimionals_name">
+								<h3>John Doe</h3>
+								<span>Founder - xyz.com</span>
+							</div>
+						</div>
+						<div class="testimionals_row_piece">
+							<div class="avatar">
+								<img src="assets/images/avatar.svg" alt="avatar">
+							</div>
+							<p>
+								“Sagar was extremely easy and pleasant to work with and he truly 
+								cares about the project being a success. Sagar has a high level 
+								of knowledge and was able to work on my MERN stack application 
+								without any issues.”
+							</p>
+							<div class="testimionals_name">
+								<h3>John Doe</h3>
+								<span>Founder - xyz.com</span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			 <section>
+				<div class="contact">
+					<div class="contact_title">
+						<span>Get in touch</span>
+						<p>
+							What’s next? Feel free to reach out to me if you're looking for a developer,
+							 have a query, or simply want to connect.
+						</p>
+					</div>
+					<div class="contact_items">
+						<div class="contact_items_row">
+							<div class="contact_icon">
+								<img src="assets/images/contact/message.svg" alt="message">
+							</div>
+							<div class="contact_mail">
+								<a href="mailto:arturbaghdanyan20@gmail.com">arturbaghdanyan20@gmail.com</a>
+							</div>
+							<div class="contact_icon">
+								<img src="assets/images/contact/copy.svg" alt="copy">
+							</div>
+						</div>
+						<div class="contact_items_row">
+							<div class="contact_icon">
+								<img src="assets/images/contact/phone.svg" alt="phone">
+							</div>
+							<div class="contact_mail">
+								<a href="tel:+37496020999">+374 96 02 09 99</a>
+							</div>
+							<div class="contact_icon">
+								<img src="assets/images/contact/copy.svg" alt="copy">
+							</div>
+						</div>
+					</div>
+					
+					<div class="social">
+						<span>You may also find me on these platforms!</span>
+						<div class="social_links">
+							<a 
+								href="https://github.com/ArturBaghdanyan?tab=repositories"
+								target="_blank"
+							>
+								<img src="assets/images/contact/github.svg" alt="github">
+							</a>
+							<a href="+37496020999" target="_blank">
+								<img src="assets/images/contact/telegram.svg" alt="telegram">
+							</a>
+							<a href="@Artur Baghdanyan" target="_blank">
+								<img src="assets/images/contact/slack.svg" alt="slack">
+							</a>
+						</div>
+					</div>
+				</div>
+			</section> 
 		</main>
 
 
-		<footer></footer>
+		<footer>
+			<div class="footer_text">
+				<img src="assets/images/footer/copyright.svg" alt="copyright">
+				<p>2024 | Designed and coded with ❤️️ by User</p>
+			</div>
+		</footer>
 
 <script src="index.js"></script>
 </body>

@@ -40,6 +40,7 @@ header .header .nav > nav {
 header .header .nav > nav > a {
   text-decoration: none;
   color: rgb(75, 85, 99);
+  font-weight: 500;
 }
 @media screen and (max-width: 800px) {
   header .header .nav {
@@ -99,6 +100,7 @@ header .header .header_nav > nav {
 header .header .header_nav > nav > a {
   text-decoration: none;
   color: rgb(75, 85, 99);
+  font-weight: 500;
 }
 header .header .header_nav .nav_title {
   width: 100%;
@@ -144,6 +146,7 @@ header .header .download > button {
   background: #000;
   border-radius: 12px;
   color: white;
+  border: 0;
 }
 header .header_menu {
   display: none;
@@ -189,6 +192,7 @@ header .header_menu {
     background: #000;
     border-radius: 12px;
     color: white;
+    border: 0;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 800px) {

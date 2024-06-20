@@ -1,5 +1,10 @@
-@import '/css/about.css';
-@import '/css/header.css';
+@import './assets/css/header/header.css';
+@import './assets/css/about/about.css';
+@import './assets/css/work/work.css';
+@import './assets/css/testimionals/testimionals.css';
+@import './assets/css/contact/contact.css';
+
+
 * {
     margin: 0;
     padding: 0;
@@ -9,6 +14,12 @@
 
 .container {
   padding: 0 5rem 0 5rem;
+}
+
+@media only screen and (max-width: 500px) {
+	.container {
+		padding: 0 2rem 0 2rem;
+	}
 }
 
 
@@ -139,9 +150,15 @@ main {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top: 96px;
-	padding-bottom: 96px;
+	padding-top: 6rem;
+	padding-bottom: 6rem;
 
+	.skills_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+	
 	> span {
 		width: 75px;
 		height: 28px;
@@ -157,6 +174,7 @@ main {
 		margin: 20px auto;
 		color: rgba(75, 85, 99, 1);
 	}
+}
 	.skills_name {
 		width: 100%;
 		column-gap: 80px;
@@ -185,7 +203,6 @@ main {
 		padding: 0 2rem;
 		 .skills_name {
 			column-gap: 30px;
-
 		}
 	}
 }
@@ -196,9 +213,15 @@ main {
 	background: rgba(249, 250, 251, 1);
 	padding: 80px 5rem;
 
+	.experience_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+
 	& span {
-		width: 115px;
 		height: 28px;
+		padding: 4px 20px 4px 20px;
 		display: flex;
 		justify-content: center;
 		align-items: center;
@@ -211,6 +234,7 @@ main {
 		margin: 20px auto;
 		color: rgba(75, 85, 99, 1);
 	}
+}
 
 	.columns {
 		display: grid;
@@ -238,8 +262,11 @@ main {
 				margin-top: 15px;
 				padding-left: 20px;
 				color: rgba(75, 85, 99, 1);
-				font-size: 16px;
-				font-weight: 400;
+				
+				> li {
+					font-size: 16px;
+					font-weight: 400;
+				}
 			}
 		}
 		.months_duration {
@@ -292,6 +319,7 @@ main {
 			display: grid;
 			grid-template-columns: auto;
 			row-gap: 15px;
+			padding: 32px;
 		}
 		.image_container {
 			order: 1;
@@ -307,4 +335,21 @@ main {
 }
 }
 
+footer {
+	background-color: rgba(249, 250, 251, 1);
+	width: 100%;
+	height: auto;
+	padding: 24px 0;
 
+	& .footer_text {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		column-gap: 8px;
+
+		> img {
+			width: 16px;
+			height: 16px;
+		}
+	}
+}

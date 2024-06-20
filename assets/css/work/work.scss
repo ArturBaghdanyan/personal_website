@@ -1,0 +1,115 @@
+.work {
+    display: flex;
+    flex-direction: column;
+    padding: 6rem 0;
+
+	.work_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+	
+    & span {
+		height: 28px;
+		padding: 4px 20px 4px 20px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		font-size: 14px;
+		border-radius: 12px;
+		background-color: rgba(229, 231, 235, 1);
+        color: rgba(75, 85, 99, 1);
+	}
+
+    & p {
+		line-height: 24px;
+		color: rgba(75, 85, 99, 1);
+    }
+}
+
+	& .projects_column {
+		display: flex;
+		flex-direction: column;
+		row-gap: 48px;
+		margin-top: 48px;
+
+		.projects_column_row {
+			display: flex;
+
+			> .project_image {
+				border-radius: 12px 0 0 12px;
+				border: 1px;
+				width: 50%;
+				min-height: 100% !important;
+				height: 480px;
+
+				> img {
+					width: 100%;
+					height: 480px;
+				}
+			}
+			> .projects_text {
+				width: 50%;
+				height: auto;
+				display: flex;
+				flex-direction: column;
+				box-shadow: 1px 1px 1px 1px rgba(0, 0, 0, 0.06);
+				background: rgba(255, 255, 255, 1);
+				border-radius: 0 12px 12px 0;
+				padding: 48px;
+				row-gap: 24px;
+
+				& .project_description {
+					display: flex;
+					flex-wrap: wrap;
+					text-align: start;
+					row-gap: 8px;
+				}
+			}
+		}
+		.projects_column_row:nth-child(2) {
+			display: flex;
+			flex-direction: row-reverse;
+		}
+
+		// @media only screen and (max-width: 375px) {
+		// 	.projects_column_row, .projects_column_row:nth-child(2) {
+		// 		display: flex;
+		// 		flex-direction: column;
+		// 		align-items: center;
+				
+		// 		> .project_image {
+		// 			width: 100%;
+		// 		}
+		// 		> .projects_text {
+		// 			width: 100%;
+		// 		}
+		// 	}
+		// }
+	
+
+		@media only screen and (min-width: 376px) and (max-width: 992px) {
+			
+			.projects_column_row {
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				
+				> .project_image {
+					width: 100%;
+					> img {
+						border-radius: 12px 12px 0 0 !important;
+					}
+				}
+					> .projects_text {
+						width: 100%;
+						border-radius: 0 0 12px 12px !important;
+					}
+			}
+				.projects_column_row:nth-child(2) {
+					display: flex;
+					flex-direction: column;
+				}
+			}
+		}
+}

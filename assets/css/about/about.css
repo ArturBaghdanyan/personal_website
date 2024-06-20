@@ -174,7 +174,7 @@
     row-gap: 20px;
   }
   .about .about-container .about_text > .about-image {
-    width: 100%;
+    width: 300px;
     height: 520px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -184,7 +184,10 @@
             justify-content: center;
   }
   .about .about-container .about_text > .about-image > img {
-    width: 300px;
-    height: 520px;
+    max-width: 100%;
+    height: 100%;
+  }
+  .about .about-container .about_text .about_texture > h1 {
+    font-size: 24px;
   }
 }

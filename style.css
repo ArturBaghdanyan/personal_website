@@ -1,5 +1,8 @@
-@import '/css/about.css';
-@import '/css/header.css';
+@import './assets/css/header/header.css';
+@import './assets/css/about/about.css';
+@import './assets/css/work/work.css';
+@import './assets/css/testimionals/testimionals.css';
+@import './assets/css/contact/contact.css';
 * {
   margin: 0;
   padding: 0;
@@ -12,6 +15,11 @@
   padding: 0 5rem 0 5rem;
 }
 
+@media only screen and (max-width: 500px) {
+  .container {
+    padding: 0 2rem 0 2rem;
+  }
+}
 main {
   height: auto;
 }
@@ -182,10 +190,23 @@ main .personal .image > img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 96px;
-  padding-bottom: 96px;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
 }
-.skills > span {
+.skills .skills_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 16px;
+}
+.skills .skills_title > span {
   width: 75px;
   height: 28px;
   display: -webkit-box;
@@ -202,7 +223,7 @@ main .personal .image > img {
   border-radius: 12px;
   background-color: rgb(229, 231, 235);
 }
-.skills > h3 {
+.skills .skills_title > h3 {
   margin: 20px auto;
   color: rgb(75, 85, 99);
 }
@@ -264,9 +285,22 @@ main .personal .image > img {
   background: rgb(249, 250, 251);
   padding: 80px 5rem;
 }
-.experience span {
-  width: 115px;
+.experience .experience_title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  row-gap: 16px;
+}
+.experience .experience_title span {
   height: 28px;
+  padding: 4px 20px 4px 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -281,7 +315,7 @@ main .personal .image > img {
   border-radius: 12px;
   background-color: rgb(229, 231, 235);
 }
-.experience p {
+.experience .experience_title p {
   margin: 20px auto;
   color: rgb(75, 85, 99);
 }
@@ -320,6 +354,8 @@ main .personal .image > img {
   margin-top: 15px;
   padding-left: 20px;
   color: rgb(75, 85, 99);
+}
+.experience .columns .columns_piece .columns_piece_text > ul > li {
   font-size: 16px;
   font-weight: 400;
 }
@@ -374,6 +410,7 @@ main .personal .image > img {
     -ms-grid-columns: auto;
     grid-template-columns: auto;
     row-gap: 15px;
+    padding: 32px;
   }
   .experience .columns .image_container {
     -webkit-box-ordinal-group: 2;
@@ -390,4 +427,28 @@ main .personal .image > img {
         -ms-flex-order: 3;
             order: 3;
   }
+}
+footer {
+  background-color: rgb(249, 250, 251);
+  width: 100%;
+  height: auto;
+  padding: 24px 0;
+}
+footer .footer_text {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-column-gap: 8px;
+     -moz-column-gap: 8px;
+          column-gap: 8px;
+}
+footer .footer_text > img {
+  width: 16px;
+  height: 16px;
 }

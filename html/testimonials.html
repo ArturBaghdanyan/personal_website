@@ -4,8 +4,125 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Testimonials</title>
+    <link rel="stylesheet" href="../style.css">
 </head>
 <body>
     
+    <header>
+        <div class="header container">
+    
+            <div class="title">
+                <img src="../assets/images/header/tt.svg" alt="tt">
+            </div>
+    
+            <div class="nav">
+                <nav>
+                    <a href="/html/about.html" target="_blank">About</a>
+                    <a href="/html/work.html" target="_blank">Work</a>
+                    <a href="/html/testimonials.html" target="_blank">Testimonials</a>
+                    <a href="/html/contact.html" target="_blank">Contact</a>
+                </nav>
+                <div class="download">
+                    <img src="../assets/images/header/mode.svg" alt="mode">
+                    <button>Download CV</button>
+                </div>
+            </div>
+    
+            <div class="header_nav" id="header-nav">
+                <div class="nav_title">
+                    <div class="icon">
+                        <img src="../assets/favicon.ico" alt="favicon">
+                    </div>
+                    <span class="close_btn" onclick="hideSidebar()">
+                        <img src="../assets/images/header/close.svg" alt="menu">
+                    </span>
+                </div>
+                
+                <nav>
+                    <a href="/html/about.html" target="_blank">About</a>
+                    <a href="/html/work.html" target="_blank">Work</a>
+                    <a href="/html/testimonials.html" target="_blank">Testimonials</a>
+                    <a href="/html/contact.html" target="_blank">Contact</a>
+                </nav>
+                    <div class="download">
+                        <div>
+                            <span>Switch theme</span>
+                            <img src="../assets/images/header/mode.svg" alt="mode">
+                        </div>
+                        <div class="button">
+                            <button>Download CV</button>
+                        </div>
+                    </div>
+            </div>
+    
+            <div class="header_menu" id="mobile-menu" onclick="showSideBar()">
+                <img src="../assets/images/header/menu.svg" alt="close-button">
+            </div>
+    
+        </div>
+    </header>
+
+    <section style="background-color: rgba(249, 250, 251, 1);">
+        <div class="testimionals">
+            <div class="testimionals_title">
+                <span>Testiminoals</span>
+                <p>Nice things people have said about me:</p>
+            </div>
+            <div class="testimionals_row">
+                <div class="testimionals_row_piece">
+                    <div class="avatar">
+                        <img src="../assets/images/avatar.svg" alt="avatar">
+                    </div>
+                    <p>
+                        “Job well done! I am really impressed. He is very very good at 
+                        what he does :) I would recommend Sagar and will rehire in 
+                        the future for Frontend development.”
+                    </p>
+                    <div class="testimionals_name">
+                        <h3>John Doe</h3>
+                        <span>Founder - xyz.com</span>
+                    </div>
+                </div>
+                <div class="testimionals_row_piece">
+                    <div class="avatar">
+                        <img src="../assets/images/avatar.svg" alt="avatar">
+                    </div>
+                    <p>
+                        “Great guy, highly recommended for any COMPLEX front-end development 
+                        job! His skills are top-notch and he will be an amazing addition to 
+                        any team.”
+                    </p>
+                    <div class="testimionals_name">
+                        <h3>John Doe</h3>
+                        <span>Founder - xyz.com</span>
+                    </div>
+                </div>
+                <div class="testimionals_row_piece">
+                    <div class="avatar">
+                        <img src="../assets/images/avatar.svg" alt="avatar">
+                    </div>
+                    <p>
+                        “Sagar was extremely easy and pleasant to work with and he truly 
+                        cares about the project being a success. Sagar has a high level 
+                        of knowledge and was able to work on my MERN stack application 
+                        without any issues.”
+                    </p>
+                    <div class="testimionals_name">
+                        <h3>John Doe</h3>
+                        <span>Founder - xyz.com</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+		<div class="footer_text">
+			<img src="../assets/images/footer/copyright.svg" alt="copyright">
+			<p>2024 | Designed and coded with ❤️️ by User</p>
+		</div>
+	</footer>
+  
+    <script src="../index.js"></script>
 </body>
 </html>

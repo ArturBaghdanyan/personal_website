@@ -25,6 +25,7 @@ header {
                   > a {
                       text-decoration: none;
                       color: rgba(75, 85, 99, 1);
+                      font-weight: 500;
                   }
               }
           }
@@ -65,9 +66,11 @@ header {
                   flex-direction: column;
                   justify-content: start;
                   row-gap: 20px;
+
                    > a {
                       text-decoration: none;
                       color: rgba(75, 85, 99, 1);
+                      font-weight: 500;
                    }
               }
   
@@ -105,17 +108,16 @@ header {
                   background: #000;
                   border-radius: 12px;
                   color: white;
+                  border: 0;
               }
           }
           
       }
 
-
       .header_menu {
           display: none;
         }
        
-
         @media screen and (max-width: 374px) {
             .header {
                 width: 100%;
@@ -145,6 +147,7 @@ header {
                         background: #000;
                         border-radius: 12px;
                         color: white;
+                        border: 0;
                     }
                 }
             }

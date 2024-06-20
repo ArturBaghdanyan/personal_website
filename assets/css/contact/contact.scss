@@ -1,0 +1,114 @@
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	padding: 6rem 5rem !important;
+	row-gap: 48px;
+
+	 .contact_title {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+
+		& span {
+			height: 28px;
+			padding: 0 20px 0 20px;
+			display: flex;
+			align-items: center;
+			font-size: 14px;
+			border-radius: 12px;
+			background-color: rgba(229, 231, 235, 1);
+		}
+		& p {
+      width: 576px;
+			color: rgba(75, 85, 99, 1);
+			font-size: 20px;
+			font-weight: 400;
+		}
+	}
+  @media screen and (max-width: 678px) {
+    .contact_title > p {
+      width: 320px;
+    }
+}
+	& .contact_items {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 16px;
+
+		.contact_items_row {
+			display: flex;
+			align-items: center;
+			column-gap: 20px;
+
+			> .contact_mail > a {
+					text-decoration: none;
+					color: rgba(17, 24, 39, 1);
+					font-size: 36px;
+					font-weight: 600;
+				}
+        & .contact_icon {
+          width: 32px;
+          height: 32px;
+
+          > img {
+            max-width: 100%;
+            height: 32px;
+          }
+        }
+		}
+    @media screen and (max-width: 678px) {
+      .contact_items_row {
+
+      .contact_icon {
+        width: 24px;
+        height: 24px;
+        > img {
+          max-width: 100%;
+          height: 24px;
+        }
+      }
+      .contact_mail > a {
+        font-size: 18px;
+      }
+      
+    }
+  }
+		@media screen and (min-width: 679px) and (max-width: 992px) {
+      .contact_items_row > .contact_mail > a {
+        font-size: 28px;
+      }
+    }
+	}
+  
+	.social {
+		 display: flex;
+		 flex-direction: column;
+		 align-items: center;
+		 row-gap: 8px;
+
+		 .social_links {
+			display: flex;
+			> a {
+				text-decoration: none;
+				width: 36px;
+				height: 36px;
+				> img {
+					width: 100%;
+					height: 36px;
+				}
+			}
+		 }
+	}
+}
+
+@media only screen and (max-width: 678px) {
+  .contact {
+    padding: 4rem 1rem !important;
+  }
+}
+
+
