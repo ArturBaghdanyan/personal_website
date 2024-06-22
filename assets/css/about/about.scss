@@ -62,7 +62,12 @@
 			}
 		}
 	}
+	
+	}
 	@media only screen and (min-width: 768px) and (max-width: 992px) {
+		.about-container {
+			padding: 4rem !important;
+
 		.about_text {
 			display: flex;
 			flex-direction: column;
@@ -83,9 +88,10 @@
 		}
 	}
 	}
+
 	@media only screen and (min-width: 374px) and (max-width: 767px) {
 		.about-container {
-			padding: 2rem;
+			padding: 2rem !important;
 		
 		.about_text {
 			display: flex;
@@ -98,7 +104,7 @@
 				height: 520px;
 				display: flex;
 				justify-content: center;
-
+				
 			> img {
 				width: 440px;
 				height: 520px;

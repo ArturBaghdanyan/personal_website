@@ -75,6 +75,9 @@
   }
 }
 @media only screen and (min-width: 768px) and (max-width: 992px) {
+  .about .about-container {
+    padding: 4rem !important;
+  }
   .about .about-container .about_text {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -105,7 +108,7 @@
 }
 @media only screen and (min-width: 374px) and (max-width: 767px) {
   .about .about-container {
-    padding: 2rem;
+    padding: 2rem !important;
   }
   .about .about-container .about_text {
     display: -webkit-box;

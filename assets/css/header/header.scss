@@ -1,191 +1,185 @@
-header {
-    overflow: hidden;
-    width: 100%;
-  
-      .header {
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-          width: 100%;
-          height: 68px;
-  
-          .nav {
-              display: flex;
-              align-items: center;
-              column-gap: 10px;
-  
-              > nav {
-                  display: flex;
-                  column-gap: 20px;
-                  border-width: 100%;
-                  border-right: 1px solid lightgray;
-                  padding-right: 20px;
-              
-  
-                  > a {
-                      text-decoration: none;
-                      color: rgba(75, 85, 99, 1);
-                      font-weight: 500;
-                  }
-              }
-          }
-          @media screen and (max-width: 800px) {
-              .nav {
-                display: none;
-              }
-              .header_menu {
-                  display: flex;
-              }
-          }
-  
-          .header_nav {
-              width: 250px;
-              height: 100vh;
-              display: none;
-              flex-direction: column;
-              align-items: center;
-              justify-content: start;
-              position: fixed;
-              z-index: 999;
-              top: 0;
-              right: 0;
-              background-color: white;
-              box-shadow: -10px 0 10px rgba(0,0,0,1);
-              overflow-x: hidden;
-              transition: 0.5s;
-              padding: 10px 10px;
-              row-gap: 25px;
-  
-              > .icon {
-                  width: 30px;
-                  height: 30px;
-              }
-              > nav {
-                  width: 100%;
-                  display: flex;
-                  flex-direction: column;
-                  justify-content: start;
-                  row-gap: 20px;
+	.header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			height: 68px;
 
-                   > a {
-                      text-decoration: none;
-                      color: rgba(75, 85, 99, 1);
-                      font-weight: 500;
-                   }
-              }
-  
-          .nav_title {
-              width: 100%;
-              display: flex;
-              justify-content: space-between;
-  
-              > .icon > img {
-                  width: 30px;
-                  height: 30px;
-              }
-          .close_btn {
-              width: 30px;
-              height: 30px;
-  
-              > img {
-                width: 30px;
-                height: 30px;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                font-size: 30px;
-              }
-            }
-          }
-          }
-      
-          .download {
-              display: flex;
-              column-gap: 12px;
-  
-              > button {
-                  width: 136px;
-                  background: #000;
-                  border-radius: 12px;
-                  color: white;
-                  border: 0;
-              }
-          }
-          
-      }
+			.nav {
+					display: flex;
+					align-items: center;
+					column-gap: 10px;
 
-      .header_menu {
-          display: none;
-        }
-       
-        @media screen and (max-width: 374px) {
-            .header {
-                width: 100%;
-                padding: 0 1rem;
+					> nav {
+							display: flex;
+							column-gap: 20px;
+							border-width: 100%;
+							border-right: 1px solid lightgray;
+							padding-right: 20px;
+					
 
-            .header_menu {
-                display: flex;
-            }
+							> a {
+									text-decoration: none;
+									color: rgba(75, 85, 99, 1);
+									font-weight: 500;
+							}
+					}
+			}
+			@media screen and (max-width: 800px) {
+					.nav {
+						display: none;
+					}
+					.header_menu {
+							display: flex;
+					}
+			}
 
-            .download {
-                width: 100%;
-                display: flex;
-                flex-direction: column;
-                row-gap: 20px;
-    
-                > div {
-                    display: flex;
-                    justify-content: space-between;
-                    align-items: center;
-                }
-                > .button {
-                    width: 100%;
-                    
-                    > button {
-                        width: 100%;
-                        height: 36px;
-                        background: #000;
-                        border-radius: 12px;
-                        color: white;
-                        border: 0;
-                    }
-                }
-            }
-        }
-        }
-  
-      @media screen and (min-width: 375px) and (max-width: 800px) {
-          .header_menu {
-              display: flex;
-          }
-          .download {
-              width: 100%;
-              display: flex;
-              flex-direction: column;
-              row-gap: 20px;
-  
-              > div {
-                  display: flex;
-                  justify-content: space-between;
-                  align-items: center;
-              }
-              > .button {
-                  width: 100%;
-                  
-                  > button {
-                      width: 100%;
-                      height: 36px;
-                      background: #000;
-                      border-radius: 12px;
-                      color: white;
-                  }
-              }
-          }
-      }
-      @media screen and (min-width: 678px) and (max-width: 992px) {
-        .header {
-            width: 100%;
-            padding: 0 2rem;
-        }
-    }
-  }
+			.header_nav {
+					width: 250px;
+					height: 100vh;
+					display: none;
+					flex-direction: column;
+					align-items: center;
+					justify-content: start;
+					position: fixed;
+					z-index: 999;
+					top: 0;
+					right: 0;
+					background-color: white;
+					box-shadow: -10px 0 10px rgba(0,0,0,1);
+					overflow-x: hidden;
+					transition: 0.5s;
+					padding: 10px 10px;
+					row-gap: 25px;
+
+					> .icon {
+							width: 30px;
+							height: 30px;
+					}
+					> nav {
+							width: 100%;
+							display: flex;
+							flex-direction: column;
+							justify-content: start;
+							row-gap: 20px;
+
+								> a {
+									text-decoration: none;
+									color: rgba(75, 85, 99, 1);
+									font-weight: 500;
+								}
+					}
+
+			.nav_title {
+					width: 100%;
+					display: flex;
+					justify-content: space-between;
+
+					> .icon > img {
+							width: 30px;
+							height: 30px;
+					}
+			.close_btn {
+					width: 30px;
+					height: 30px;
+
+					> img {
+						width: 30px;
+						height: 30px;
+						display: flex;
+						justify-content: center;
+						align-items: center;
+						font-size: 30px;
+					}
+				}
+			}
+			}
+	
+			.download {
+					display: flex;
+					column-gap: 12px;
+
+					> button {
+							width: 136px;
+							background: #000;
+							border-radius: 12px;
+							color: white;
+							border: 0;
+					}
+			}
+			
+	}
+
+	.header_menu {
+			display: none;
+		}
+		
+		@media screen and (max-width: 374px) {
+				.header {
+						width: 100%;
+						padding: 0 1rem;
+
+				.header_menu {
+						display: flex;
+				}
+
+				.download {
+						width: 100%;
+						display: flex;
+						flex-direction: column;
+						row-gap: 20px;
+
+						> div {
+								display: flex;
+								justify-content: space-between;
+								align-items: center;
+						}
+						> .button {
+								width: 100%;
+								
+								> button {
+										width: 100%;
+										height: 36px;
+										background: #000;
+										border-radius: 12px;
+										color: white;
+										border: 0;
+								}
+						}
+				}
+		}
+		}
+
+	@media screen and (min-width: 375px) and (max-width: 800px) {
+			.header_menu {
+					display: flex;
+			}
+			.download {
+					width: 100%;
+					display: flex;
+					flex-direction: column;
+					row-gap: 20px;
+
+					> div {
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+					}
+					> .button {
+							width: 100%;
+							
+							> button {
+									width: 100%;
+									height: 36px;
+									background: #000;
+									border-radius: 12px;
+									color: white;
+							}
+					}
+			}
+	}
+@media screen and (min-width: 678px) and (max-width: 992px) {
+	.container {
+			// width: 100%;
+			padding: 0 2rem !important;
+	}
+}	
