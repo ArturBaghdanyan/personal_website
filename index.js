@@ -92,14 +92,7 @@ data.work.forEach(project => {
 		<div class="project_image">
 			<img src="${project.imgSrc}" alt="${project.altText}">
 		</div>
-		<div class="projects_text">
-			<h2>${project.title}</h2>
-			<p>${project.description}</p>
-			<div class="project_description">${itemsHTML}</div>
-			<div>
-				<img src="${project.skillImgSrc}" alt="skill">
-			</div>
-		</div>
+		
 	</div>
 	`
 

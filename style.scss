@@ -160,17 +160,6 @@ main {
 		align-items: center;
 		row-gap: 16px;
 	
-	> span {
-		width: 75px;
-		height: 28px;
-		display: flex;
-		justify-content: center;
-		align-items: center;
-		margin: auto;
-		font-size: 14px;
-		border-radius: 12px;
-		background-color: rgba(229, 231, 235, 1);
-	}
 	> h3 {
 		margin: 20px auto;
 		color: rgba(75, 85, 99, 1);
@@ -178,10 +167,9 @@ main {
 }
 	.skills_name {
 		width: 100%;
-		column-gap: 80px;
-		display: flex;
-		flex-wrap: wrap;
-		justify-content: space-between;
+		display: grid;
+		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+    	column-gap: 60px;
 		margin-top: 30px;
 		row-gap: 30px;
 
