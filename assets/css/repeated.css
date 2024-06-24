@@ -7,6 +7,24 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body.dark-theme {
+    background-color: rgba(3, 7, 18, 1);
+    color: white;
+}
+
+.light-mode, .dark-mode {
+    transition: display 2s;
+}
+
+.download-button {
+	width: 100%;
+	border-radius: 14px;
+	color: white;
+	border: 0;
+    text-align: center;
+	padding: 6px 16px;
+}
+
 .title {
     height: 28px;
     display: flex;

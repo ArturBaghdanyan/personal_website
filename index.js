@@ -53,12 +53,31 @@ const data = {
 function showSideBar() {
     const nav = document.getElementById("header-nav");
     nav.style.display = 'flex';
-  }
+}
   
-  function hideSidebar() {
-    const nav = document.getElementById("header-nav");
-    nav.style.display = 'none';
-  }
+function hideSidebar() {
+  const nav = document.getElementById("header-nav");
+  nav.style.display = 'none';
+}
+
+let toggleIcons  = document.querySelectorAll("#icon");
+const body = document.querySelector('body');
+const lightModeDiv = document.getElementById('lightMode');
+const darkModeDiv = document.getElementById('darkMode');
+
+toggleIcons.forEach(toggle => {
+  toggle.addEventListener('click', function() {
+      body.classList.toggle('dark-theme');
+
+      if (body.classList.contains('dark-theme')) {
+          lightModeDiv.style.display = 'none';
+          darkModeDiv.style.display = 'flex';
+      } else {
+          lightModeDiv.style.display = 'flex';
+          darkModeDiv.style.display = 'none';
+      }
+  });
+});
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -77,22 +96,22 @@ listSkills.forEach(i => {
 
 const projectsContainer = document.getElementById('projects');
 
-data.work.forEach(project => {
+data.work.forEach((project, index) => {
 
-	let itemsHTML = '';
-
-	project.skills.forEach(item => {
-		 itemsHTML += `
-			<span>${item}</span>
-			`
-	});
-
+  const itemsHTML = project.skills.map(skill => `<span>${skill}</span>`).join(' ')
 	const itemHTML = `
 	<div id="${project.id}" class="projects_column_row">
 		<div class="project_image">
 			<img src="${project.imgSrc}" alt="${project.altText}">
 		</div>
-		
+		<div class="projects_text">
+			<h2>${project.title}</h2>
+			<p>${project.description}</p>
+			<div class="project_description">${itemsHTML}</div>
+			<div>
+				<img src="${project.skillImgSrc}" alt="skill">
+			</div>
+		</div>
 	</div>
 	`
 

@@ -11,6 +11,9 @@
           align-items: center;
   height: 68px;
 }
+.header .header_light-icon {
+  display: none;
+}
 .header .nav {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -129,7 +132,7 @@
           align-items: center;
   font-size: 30px;
 }
-.header .download {
+.header .light-mode {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -137,12 +140,21 @@
      -moz-column-gap: 12px;
           column-gap: 12px;
 }
-.header .download > button {
-  width: 136px;
+.header .light-mode .light-theme {
+  color: #000;
+}
+.header .light-mode .download-button {
   background: #000;
-  border-radius: 12px;
-  color: white;
-  border: 0;
+}
+.header .dark-mode {
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header .dark-mode .download-button {
+  color: rgb(17, 24, 39);
+  background: white;
 }
 
 .header_menu {
@@ -159,7 +171,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .header .download {
+  .header .light-mode {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -170,27 +182,16 @@
             flex-direction: column;
     row-gap: 20px;
   }
-  .header .download > div {
+  .header .light-mode > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  .header .download > .button {
-    width: 100%;
-  }
-  .header .download > .button > button {
-    width: 100%;
-    height: 36px;
-    background: #000;
-    border-radius: 12px;
-    color: white;
-    border: 0;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: start;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 800px) {
@@ -199,7 +200,7 @@
     display: -ms-flexbox;
     display: flex;
   }
-  .download {
+  .light-mode {
     width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -210,7 +211,7 @@
             flex-direction: column;
     row-gap: 20px;
   }
-  .download > div {
+  .light-mode > div {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -221,15 +222,8 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .download > .button {
-    width: 100%;
-  }
-  .download > .button > button {
-    width: 100%;
-    height: 36px;
-    background: #000;
-    border-radius: 12px;
-    color: white;
+  .light-mode > .donwload-button {
+    width: 100% !important;
   }
 }
 @media screen and (min-width: 678px) and (max-width: 992px) {
