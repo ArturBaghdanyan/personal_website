@@ -10,8 +10,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 96px;
-  padding-bottom: 96px;
   width: 100%;
 }
 .about .about-container .about_text {

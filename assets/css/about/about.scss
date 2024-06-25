@@ -1,12 +1,10 @@
 .about {
 	width: 100%;
 	background: rgba(249, 250, 251, 1);
-	
+
 .about-container {
 	display: flex;
 	flex-direction: column;
-  	padding-top: 96px;
-	padding-bottom: 96px;
 	width: 100%;
 
 	.about_text {
@@ -145,3 +143,6 @@
 }
 }
 }
+// .changed-background.dark-theme {
+//     background-color:  rgba(17, 24, 39, 1) !important;
+// }

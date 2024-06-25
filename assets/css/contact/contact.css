@@ -10,7 +10,6 @@
       -ms-flex-align: center;
           align-items: center;
   text-align: center;
-  padding: 6rem 5rem !important;
   row-gap: 48px;
 }
 .contact .contact_title {
@@ -25,19 +24,6 @@
       -ms-flex-align: center;
           align-items: center;
   row-gap: 16px;
-}
-.contact .contact_title span {
-  height: 28px;
-  padding: 0 20px 0 20px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  font-size: 14px;
-  border-radius: 12px;
-  background-color: rgb(229, 231, 235);
 }
 .contact .contact_title p {
   width: 576px;
@@ -132,10 +118,4 @@
 .contact .social .social_links > a > img {
   width: 100%;
   height: 36px;
-}
-
-@media only screen and (max-width: 678px) {
-  .contact {
-    padding: 4rem 1rem !important;
-  }
 }

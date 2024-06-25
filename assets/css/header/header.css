@@ -10,6 +10,7 @@
       -ms-flex-align: center;
           align-items: center;
   height: 68px;
+  padding: 0 5rem !important;
 }
 .header .header_light-icon {
   display: none;
@@ -146,17 +147,28 @@
 .header .light-mode .download-button {
   background: #000;
 }
+.header .light-mode div > span {
+  color: rgb(75, 85, 99);
+}
 .header .dark-mode {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  -webkit-column-gap: 12px;
+     -moz-column-gap: 12px;
+          column-gap: 12px;
 }
 .header .dark-mode .download-button {
   color: rgb(17, 24, 39);
   background: white;
 }
 
+@media only screen and (max-width: 992px) {
+  .header {
+    padding: 0 2rem !important;
+  }
+}
 .header_menu {
   display: none;
 }
@@ -224,10 +236,5 @@
   }
   .light-mode > .donwload-button {
     width: 100% !important;
-  }
-}
-@media screen and (min-width: 678px) and (max-width: 992px) {
-  .container {
-    padding: 0 2rem !important;
   }
 }

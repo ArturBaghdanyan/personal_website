@@ -7,9 +7,23 @@ html, body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+.container {
+    padding: 6rem 5rem;
+  }
+  
+  @media screen and (max-width: 992px) {
+      .container {
+          padding: 4rem 2rem;
+      }
+  }	
+
 body.dark-theme {
-    background-color: rgba(3, 7, 18, 1);
+    background-color: rgba(3, 7, 18, 1) !important;
     color: white;
+}
+
+.changed-background.dark-theme {
+    background-color: rgba(17, 24, 39, 1) !important;
 }
 
 .light-mode, .dark-mode {

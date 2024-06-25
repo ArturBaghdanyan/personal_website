@@ -6,7 +6,6 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding: 6rem 0;
 }
 .work .work_title {
   display: -webkit-box;
@@ -39,9 +38,8 @@
 .work .projects_column .projects_column_row {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 20px 1fr;
+  -ms-grid-columns: 1fr 1fr;
   grid-template-columns: 1fr 1fr;
-  gap: 20px;
 }
 .work .projects_column .projects_column_row > .project_image {
   border-radius: 12px 0 0 12px;

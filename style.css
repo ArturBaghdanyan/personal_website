@@ -13,15 +13,6 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.container {
-  padding: 0 5rem 0 5rem;
-}
-
-@media only screen and (max-width: 500px) {
-  .container {
-    padding: 0 2rem 0 2rem;
-  }
-}
 main {
   height: auto;
 }
@@ -32,7 +23,6 @@ main .personal {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 96px 5rem;
 }
 main .personal .personal-text {
   width: 60%;
@@ -149,7 +139,6 @@ main .personal .image > img {
         -ms-flex-align: center;
             align-items: center;
     row-gap: 20px;
-    padding: 2rem 5rem 2rem 5rem;
   }
   main .personal .personal-text {
     width: 100%;
@@ -173,7 +162,6 @@ main .personal .image > img {
         -ms-flex-align: center;
             align-items: center;
     row-gap: 20px;
-    padding: 2rem !important;
   }
   main .personal .personal-text {
     padding-right: 2rem;
@@ -192,8 +180,6 @@ main .personal .image > img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  padding-top: 6rem;
-  padding-bottom: 6rem;
 }
 .skills .skills_title {
   display: -webkit-box;

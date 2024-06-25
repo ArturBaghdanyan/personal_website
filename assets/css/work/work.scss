@@ -1,7 +1,6 @@
 .work {
     display: flex;
     flex-direction: column;
-    padding: 6rem 0;
 
 	.work_title {
 		display: flex;
@@ -24,7 +23,6 @@
 		.projects_column_row {
 			display: grid;
 			grid-template-columns: 1fr 1fr;
-			gap: 20px;
 
 			> .project_image {
 				border-radius: 12px 0 0 12px;

@@ -15,23 +15,12 @@
 }
 
 
-.container {
-  padding: 0 5rem 0 5rem;
-}
-
-@media only screen and (max-width: 500px) {
-	.container {
-		padding: 0 2rem 0 2rem;
-	}
-}
-
 main {
 	height: auto;
 
 	.personal {
 		display: flex;
 		justify-content: space-between;
-		padding: 96px 5rem;
 
 		.personal-text {
 			width: 60%;
@@ -118,7 +107,7 @@ main {
 			flex-direction: column-reverse;
 			align-items: center;
 			row-gap: 20px;
-			padding: 2rem 5rem 2rem 5rem;
+			// padding: 2rem 5rem 2rem 5rem;
 
 			.personal-text {
 				width: 100%;
@@ -135,7 +124,7 @@ main {
 			display: flex;
 			align-items: center;
 			row-gap: 20px;
-			padding: 2rem !important;
+			// padding: 2rem !important;
 
 			.personal-text {
 				padding-right: 2rem;
@@ -152,8 +141,6 @@ main {
 	width: 100%;
 	display: flex;
 	flex-direction: column;
-	padding-top: 6rem;
-	padding-bottom: 6rem;
 
 	.skills_title {
 		display: flex;

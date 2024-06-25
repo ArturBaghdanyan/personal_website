@@ -64,17 +64,25 @@ let toggleIcons  = document.querySelectorAll("#icon");
 const body = document.querySelector('body');
 const lightModeDiv = document.getElementById('lightMode');
 const darkModeDiv = document.getElementById('darkMode');
+const lightIcon = document.getElementById('light-icon');
+const darkIcon = document.getElementById('dark-icon');
+const changedBackground = document.querySelector('.changed-background');
 
 toggleIcons.forEach(toggle => {
   toggle.addEventListener('click', function() {
       body.classList.toggle('dark-theme');
+      changedBackground.classList.toggle('dark-theme');
 
       if (body.classList.contains('dark-theme')) {
           lightModeDiv.style.display = 'none';
           darkModeDiv.style.display = 'flex';
+          lightIcon.style.display = 'flex';
+          darkIcon.style.display = 'none';
+          
       } else {
           lightModeDiv.style.display = 'flex';
           darkModeDiv.style.display = 'none';
+          darkIcon.style.display = 'flex';
       }
   });
 });

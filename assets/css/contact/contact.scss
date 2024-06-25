@@ -3,7 +3,6 @@
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
-	padding: 6rem 5rem !important;
 	row-gap: 48px;
 
 	 .contact_title {
@@ -13,7 +12,7 @@
 		row-gap: 16px;
 
 		& p {
-      width: 576px;
+      		width: 576px;
 			color: rgba(75, 85, 99, 1);
 			font-size: 20px;
 			font-weight: 400;
@@ -95,11 +94,3 @@
 		 }
 	}
 }
-
-@media only screen and (max-width: 678px) {
-  .contact {
-    padding: 4rem 1rem !important;
-  }
-}
-
-

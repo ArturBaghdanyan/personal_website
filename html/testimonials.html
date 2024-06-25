@@ -7,12 +7,15 @@
     <link rel="stylesheet" href="../style.css">
 </head>
 <body>
-    
     <header>
         <div class="header container">
     
-            <div>
-                <img src="../assets/images/header/tt.svg" alt="tt">
+            <div id="dark-icon" class="header_dark-icon">
+                <img src="../assets/images/header/dark-tt.svg" alt="dark-tt">
+            </div>
+    
+            <div id="light-icon" class="header_light-icon">
+                <img src="../assets/images/header/light-tt.svg" alt="light-tt">
             </div>
     
             <div class="nav">
@@ -22,9 +25,13 @@
                     <a href="/html/testimonials.html" target="_blank">Testimonials</a>
                     <a href="/html/contact.html" target="_blank">Contact</a>
                 </nav>
-                <div class="download">
-                    <img src="../assets/images/header/mode.svg" alt="mode">
-                    <button>Download CV</button>
+                <div id="lightMode" class="light-mode">
+                    <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+                    <button class="download-button">Download CV</button>
+                </div>
+                <div id="darkMode" class="dark-mode">
+                    <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                    <button class="download-button">Download CV</button>
                 </div>
             </div>
     
@@ -37,22 +44,26 @@
                         <img src="../assets/images/header/close.svg" alt="menu">
                     </span>
                 </div>
-                
+            
                 <nav>
                     <a href="/html/about.html" target="_blank">About</a>
                     <a href="/html/work.html" target="_blank">Work</a>
                     <a href="/html/testimonials.html" target="_blank">Testimonials</a>
                     <a href="/html/contact.html" target="_blank">Contact</a>
                 </nav>
-                    <div class="download">
-                        <div>
-                            <span>Switch theme</span>
-                            <img src="../assets/images/header/mode.svg" alt="mode">
-                        </div>
-                        <div class="button">
-                            <button>Download CV</button>
-                        </div>
+    
+                <div>
+                    <div id="lightMode" class="light-mode">
+                        <span>Switch theme</span>
+                        <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
                     </div>
+                    <div id="darkMode" class="dark-mode">
+                        <span>Switch theme</span>
+                        <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                    </div>
+                    <button class="download-button">Download CV</button>
+                </div>
+    
             </div>
     
             <div class="header_menu" id="mobile-menu" onclick="showSideBar()">
@@ -62,8 +73,9 @@
         </div>
     </header>
 
+
     <section style="background-color: rgba(249, 250, 251, 1);">
-        <div class="testimionals">
+        <div class="testimionals container">
             <div class="testimionals_title">
                 <span class="title">Testiminoals</span>
                 <p>Nice things people have said about me:</p>

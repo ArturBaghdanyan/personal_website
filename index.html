@@ -20,11 +20,11 @@
 <header>
 	<div class="header container">
 
-		<div class="header_dark-icon">
+		<div id="dark-icon" class="header_dark-icon">
 			<img src="assets/images/header/dark-tt.svg" alt="dark-tt">
 		</div>
 
-		<div class="header_light-icon">
+		<div id="light-icon" class="header_light-icon">
 			<img src="assets/images/header/light-tt.svg" alt="light-tt">
 		</div>
 
@@ -54,20 +54,29 @@
 					<img src="assets/images/header/close.svg" alt="menu">
 				</span>
 			</div>
-			
+		
 			<nav>
 				<a href="/html/about.html" target="_blank">About</a>
 				<a href="/html/work.html" target="_blank">Work</a>
 				<a href="/html/testimonials.html" target="_blank">Testimonials</a>
 				<a href="/html/contact.html" target="_blank">Contact</a>
 			</nav>
-			<div class="light-mode">
-				<div>
-					<span>Switch theme</span>
-					<img src="assets/images/header/lightMode.svg" alt="mode">
+
+				<div id="lightMode" class="light-mode">
+					<div>
+						<span>Switch theme</span>
+						<img src="assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+					</div>
+					<button class="download-button">Download CV</button>
+				</div>
+				<div id="darkMode" class="dark-mode">
+					<div>
+						<span>Switch theme</span>
+						<img src="assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
 				</div>
 				<button class="download-button">Download CV</button>
 			</div>
+
 		</div>
 
 		<div class="header_menu" id="mobile-menu" onclick="showSideBar()">
@@ -120,7 +129,7 @@
 				</div>
 			</div>
 
-			<div class="about">
+			<div class="about changed-background">
 				<div class="about-container container">
 					
 					<span class="title">About me</span>
@@ -191,7 +200,7 @@
 			<div id="my-skills" class="skills_name"></div>
 		</section>
 
-			<section class="experience">
+			<section class="experience changed-background">
 				<div class="experience_title">
 					<span class="title">Experience</span>
 					<p>Here is a quick summary of my most recent experiences:</p>
@@ -271,18 +280,16 @@
 			</section>
 
 
-			<section class="container">
-				<div class="work">
-					<div class="work_title">
-						<span class="title">Work</span>
-						<p>Some of the noteworthy projects I have built:</p>
-					</div>
-					<div id="projects" class="projects_column"></div>
+			<section class="work container">
+				<div class="work_title">
+					<span class="title">Work</span>
+					<p>Some of the noteworthy projects I have built:</p>
 				</div>
+				<div id="projects" class="projects_column"></div>
 			</section>
 
 			<section style="background-color: rgba(249, 250, 251, 1);">
-				<div class="testimionals">
+				<div class="testimionals container">
 					<div class="testimionals_title">
 						<span class="title">Testiminoals</span>
 						<p>Nice things people have said about me:</p>
@@ -336,7 +343,7 @@
 			</section>
 
 			 <section>
-				<div class="contact">
+				<div class="contact container">
 					<div class="contact_title">
 						<span class="title">Get in touch</span>
 						<p>
