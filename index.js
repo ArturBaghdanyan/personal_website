@@ -66,13 +66,44 @@ const lightModeDiv = document.getElementById('lightMode');
 const darkModeDiv = document.getElementById('darkMode');
 const lightIcon = document.getElementById('light-icon');
 const darkIcon = document.getElementById('dark-icon');
-const changedBackground = document.querySelector('.changed-background');
+const elementsToToggle = document.querySelectorAll(
+    '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece', '.header_nav'
+);
+const allText = document.querySelectorAll('p, li, h3');
+const allSpans = document.querySelectorAll('section span');
+
 
 toggleIcons.forEach(toggle => {
   toggle.addEventListener('click', function() {
       body.classList.toggle('dark-theme');
-      changedBackground.classList.toggle('dark-theme');
-
+  
+      elementsToToggle.forEach(element => {
+        if (body.classList.contains('dark-theme')) {
+            element.classList.add('dark-theme');
+            element.style.backgroundColor = 'rgba(31, 41, 55, 1)';
+        } else {
+            element.classList.remove('dark-theme');
+            element.style.backgroundColor = 'rgb(255, 255, 255)';
+        }
+      });
+      allText.forEach(text => {
+        if (body.classList.contains('dark-theme')) {
+            text.classList.add('dark-theme');
+            text.style.color = 'rgba(209, 213, 219, 1)';
+        } else {
+            text.classList.remove('dark-theme');
+            text.style.color = 'rgb(75, 85, 99)';
+        }
+      });
+      allSpans.forEach(span => {
+        if (body.classList.contains('dark-theme')) {
+            span.classList.add('dark-theme');
+            span.style.background = 'rgba(55, 65, 81, 1)';
+        } else {
+            span.classList.remove('dark-theme');
+            span.style.background = 'rgba(229, 231, 235, 1)';
+        }
+      });
       if (body.classList.contains('dark-theme')) {
           lightModeDiv.style.display = 'none';
           darkModeDiv.style.display = 'flex';
