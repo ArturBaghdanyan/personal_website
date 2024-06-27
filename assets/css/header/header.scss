@@ -104,16 +104,13 @@
 			.light-mode {
 					display: flex;
 					column-gap: 12px;
-
-					& .light-theme {
-						color: #000;
-					}
-
-					& .download-button {
-						background: #000;
-					}
+					
 					div > span {
 						color: rgba(75, 85, 99, 1);
+					}
+					& .download-button {
+						background: #000;
+						color: white;
 					}
 			}
 
@@ -127,6 +124,9 @@
 					background: white;
 				}
 			}		
+			.header_menu {
+				display: none;
+			}
 	}
 
 	@media only screen and (max-width: 992px) {
@@ -135,9 +135,7 @@
 		}
 	}
 
-	.header_menu {
-			display: none;
-		}
+	
 		
 		@media screen and (max-width: 374px) {
 				.header {
@@ -163,7 +161,8 @@
 		}
 		}
 
-	@media screen and (min-width: 375px) and (max-width: 800px) {
+	@media only screen and (min-width: 375px) and (max-width: 800px) {
+		.header {
 			.header_menu {
 					display: flex;
 			}
@@ -179,8 +178,17 @@
 							align-items: center;
 							
 					}
-					> .donwload-button {
-							width: 100% !important;
-					}
+					
 			}
+			.dark-mode {
+				display: none;
+				align-items: center;
+				column-gap: 12px;
+
+				& .download-button {
+					color: rgba(17, 24, 39, 1);
+					background: white;
+				}
+			}	
+		}
 	}

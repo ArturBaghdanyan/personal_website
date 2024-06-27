@@ -64,59 +64,58 @@ let toggleIcons  = document.querySelectorAll("#icon");
 const body = document.querySelector('body');
 const lightModeDiv = document.getElementById('lightMode');
 const darkModeDiv = document.getElementById('darkMode');
-const lightIcon = document.getElementById('light-icon');
-const darkIcon = document.getElementById('dark-icon');
+const lightIcons = document.querySelectorAll('.header_light-icon.theme-icon');
+const darkIcons = document.querySelectorAll('.header_dark-icon.theme-icon');
 const elementsToToggle = document.querySelectorAll(
-    '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece', '.header_nav'
+  '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece, .header_nav'
 );
-const allText = document.querySelectorAll('p, li, h3');
+const allText = document.querySelectorAll('p, li');
+const titleTexts = document.querySelectorAll('h3, a');
 const allSpans = document.querySelectorAll('section span');
 
 
+const toggleIconsVisibility = () => {
+  lightIcons.forEach(icon => icon.style.display = body.classList.contains('dark-theme') ? 'flex' : 'none');
+  darkIcons.forEach(icon => icon.style.display = body.classList.contains('dark-theme') ? 'none' : 'flex');
+};
+
+const toggleClassAndStyle = (elements, className, darkStyle, lightStyle) => {
+  elements.forEach(element => {
+    if (body.classList.contains('dark-theme')) {
+      element.classList.add(className);
+      Object.assign(element.style, darkStyle);
+    } else {
+      element.classList.remove(className);
+      Object.assign(element.style, lightStyle);
+    }
+  });
+};
+
 toggleIcons.forEach(toggle => {
-  toggle.addEventListener('click', function() {
-      body.classList.toggle('dark-theme');
-  
-      elementsToToggle.forEach(element => {
-        if (body.classList.contains('dark-theme')) {
-            element.classList.add('dark-theme');
-            element.style.backgroundColor = 'rgba(31, 41, 55, 1)';
-        } else {
-            element.classList.remove('dark-theme');
-            element.style.backgroundColor = 'rgb(255, 255, 255)';
-        }
-      });
-      allText.forEach(text => {
-        if (body.classList.contains('dark-theme')) {
-            text.classList.add('dark-theme');
-            text.style.color = 'rgba(209, 213, 219, 1)';
-        } else {
-            text.classList.remove('dark-theme');
-            text.style.color = 'rgb(75, 85, 99)';
-        }
-      });
-      allSpans.forEach(span => {
-        if (body.classList.contains('dark-theme')) {
-            span.classList.add('dark-theme');
-            span.style.background = 'rgba(55, 65, 81, 1)';
-        } else {
-            span.classList.remove('dark-theme');
-            span.style.background = 'rgba(229, 231, 235, 1)';
-        }
-      });
-      if (body.classList.contains('dark-theme')) {
-          lightModeDiv.style.display = 'none';
-          darkModeDiv.style.display = 'flex';
-          lightIcon.style.display = 'flex';
-          darkIcon.style.display = 'none';
-          
-      } else {
-          lightModeDiv.style.display = 'flex';
-          darkModeDiv.style.display = 'none';
-          darkIcon.style.display = 'flex';
-      }
+  toggle.addEventListener('click', () => {
+    body.classList.toggle('dark-theme');
+
+    toggleClassAndStyle(elementsToToggle, 'dark-theme', { backgroundColor: 'rgba(31, 41, 55, 1)' }, { backgroundColor: 'rgb(255, 255, 255)' });
+    toggleClassAndStyle(titleTexts, 'dark-theme', { color: 'rgba(249, 250, 251, 1)' }, { color: 'rgb(75, 85, 99)' });
+    toggleClassAndStyle(allText, 'dark-theme', { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' });
+    toggleClassAndStyle(allSpans, 'dark-theme', { background: 'rgba(55, 65, 81, 1)' }, { background: 'rgba(229, 231, 235, 1)' });
+
+    toggleIconsVisibility();
+
+    if (body.classList.contains('dark-theme')) {
+      lightModeDiv.style.display = 'none';
+      darkModeDiv.style.display = 'flex';
+      lightIcon.style.display = 'flex';
+      darkIcon.style.display = 'none';
+    } else {
+      lightModeDiv.style.display = 'flex';
+      darkModeDiv.style.display = 'none';
+      darkIcon.style.display = 'flex';
+      lightIcon.style.display = 'none';
+    }
   });
 });
+toggleIconsVisibility();
 
 document.addEventListener('DOMContentLoaded', () => {
 
