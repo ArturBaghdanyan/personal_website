@@ -22,7 +22,7 @@ const data = {
     "work": [
         {
             "id": 1,
-            "imgSrc": "../assets/images/work/work_img.png",
+            "imgSrc": "../assets/images/work/work.png",
             "altText": "work_img",
             "title": "Fiskil",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
@@ -31,7 +31,7 @@ const data = {
         },
         {
             "id": 2,
-            "imgSrc": "../assets/images/work/work_img.png",
+            "imgSrc": "../assets/images/work/work.png",
             "altText": "work_img",
             "title": "Fiskil",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",
@@ -40,7 +40,7 @@ const data = {
         },
         {
             "id": 3,
-            "imgSrc": "../assets/images/work/work_img.png",
+            "imgSrc": "../assets/images/work/work.png",
             "altText": "work_img",
             "title": "Fiskil",
             "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.",

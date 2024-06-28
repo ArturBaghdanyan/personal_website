@@ -10,11 +10,11 @@
     <header>
         <div class="header container">
     
-            <div id="dark-icon" class="header_dark-icon">
+            <div class="header_dark-icon theme-icon">
                 <img src="../assets/images/header/dark-tt.svg" alt="dark-tt">
             </div>
     
-            <div id="light-icon" class="header_light-icon">
+            <div class="header_light-icon theme-icon">
                 <img src="../assets/images/header/light-tt.svg" alt="light-tt">
             </div>
     
@@ -37,8 +37,11 @@
     
             <div class="header_nav" id="header-nav">
                 <div class="nav_title">
-                    <div class="icon">
-                        <img src="../assets/favicon.ico" alt="favicon">
+                    <div class="header_dark-icon theme-icon">
+                        <img src="../assets/images/header/dark-tt.svg" alt="dark-tt">
+                    </div>
+                    <div class="header_light-icon theme-icon">
+                        <img src="../assets/images/header/light-tt.svg" alt="light-tt">
                     </div>
                     <span class="close_btn" onclick="hideSidebar()">
                         <img src="../assets/images/header/close.svg" alt="menu">
@@ -52,17 +55,21 @@
                     <a href="/html/contact.html" target="_blank">Contact</a>
                 </nav>
     
-                <div>
                     <div id="lightMode" class="light-mode">
-                        <span>Switch theme</span>
-                        <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+                        <div>
+                            <span>Switch theme</span>
+                            <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+                        </div>
+                        <button class="download-button">Download CV</button>
                     </div>
+    
                     <div id="darkMode" class="dark-mode">
-                        <span>Switch theme</span>
-                        <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                        <div>
+                            <span>Switch theme</span>
+                            <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                        </div>
+                        <button class="download-button">Download CV</button>
                     </div>
-                    <button class="download-button">Download CV</button>
-                </div>
     
             </div>
     
@@ -74,14 +81,15 @@
     </header>
 
 
-    <section style="background-color: rgba(249, 250, 251, 1);">
+    <section id="testimionals-bg" class="changed-background">
         <div class="testimionals container">
             <div class="testimionals_title">
                 <span class="title">Testiminoals</span>
-                <p>Nice things people have said about me:</p>
+                <p>Nice thin
+                    gs people have said about me:</p>
             </div>
             <div class="testimionals_row">
-                <div class="testimionals_row_piece">
+                <div id="row-piece" class="testimionals_row_piece">
                     <div class="avatar">
                         <img src="../assets/images/avatar.svg" alt="avatar">
                     </div>
@@ -92,7 +100,7 @@
                     </p>
                     <div class="testimionals_name">
                         <h3>John Doe</h3>
-                        <span>Founder - xyz.com</span>
+                        <p>Founder - xyz.com</p>
                     </div>
                 </div>
                 <div class="testimionals_row_piece">
@@ -106,7 +114,7 @@
                     </p>
                     <div class="testimionals_name">
                         <h3>John Doe</h3>
-                        <span>Founder - xyz.com</span>
+                        <p>Founder - xyz.com</p>
                     </div>
                 </div>
                 <div class="testimionals_row_piece">
@@ -121,14 +129,14 @@
                     </p>
                     <div class="testimionals_name">
                         <h3>John Doe</h3>
-                        <span>Founder - xyz.com</span>
+                        <p>Founder - xyz.com</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer>
+    <footer class="changed-background">
 		<div class="footer_text">
 			<img src="../assets/images/footer/copyright.svg" alt="copyright">
 			<p>2024 | Designed and coded with ❤️️ by User</p>

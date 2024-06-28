@@ -10,11 +10,11 @@
     <header>
         <div class="header container">
     
-            <div id="dark-icon" class="header_dark-icon">
+            <div class="header_dark-icon theme-icon">
                 <img src="../assets/images/header/dark-tt.svg" alt="dark-tt">
             </div>
     
-            <div id="light-icon" class="header_light-icon">
+            <div class="header_light-icon theme-icon">
                 <img src="../assets/images/header/light-tt.svg" alt="light-tt">
             </div>
     
@@ -37,8 +37,11 @@
     
             <div class="header_nav" id="header-nav">
                 <div class="nav_title">
-                    <div class="icon">
-                        <img src="../assets/favicon.ico" alt="favicon">
+                    <div class="header_dark-icon theme-icon">
+                        <img src="../assets/images/header/dark-tt.svg" alt="dark-tt">
+                    </div>
+                    <div class="header_light-icon theme-icon">
+                        <img src="../assets/images/header/light-tt.svg" alt="light-tt">
                     </div>
                     <span class="close_btn" onclick="hideSidebar()">
                         <img src="../assets/images/header/close.svg" alt="menu">
@@ -52,17 +55,21 @@
                     <a href="/html/contact.html" target="_blank">Contact</a>
                 </nav>
     
-                <div>
                     <div id="lightMode" class="light-mode">
-                        <span>Switch theme</span>
-                        <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+                        <div>
+                            <span>Switch theme</span>
+                            <img src="../assets/images/header/lightMode.svg" alt="light-mode" id="icon">
+                        </div>
+                        <button class="download-button">Download CV</button>
                     </div>
+    
                     <div id="darkMode" class="dark-mode">
-                        <span>Switch theme</span>
-                        <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                        <div>
+                            <span>Switch theme</span>
+                            <img src="../assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
+                        </div>
+                        <button class="download-button">Download CV</button>
                     </div>
-                    <button class="download-button">Download CV</button>
-                </div>
     
             </div>
     
@@ -79,54 +86,54 @@
                 <span class="title">Get in touch</span>
                 <p>
                     What’s next? Feel free to reach out to me if you're looking for a developer,
-                     have a query, or simply want to connect.
+                        have a query, or simply want to connect.
                 </p>
             </div>
             <div class="contact_items">
                 <div class="contact_items_row">
                     <div class="contact_icon">
-                        <img src="/assets/images/contact/message.svg" alt="message">
+                        <img src="../assets/images/contact/message.svg" alt="message">
                     </div>
                     <div class="contact_mail">
                         <a href="mailto:arturbaghdanyan20@gmail.com">arturbaghdanyan20@gmail.com</a>
                     </div>
                     <div class="contact_icon">
-                        <img src="/assets/images/contact/copy.svg" alt="copy">
+                        <img src="../assets/images/contact/copy.svg" alt="copy">
                     </div>
                 </div>
                 <div class="contact_items_row">
                     <div class="contact_icon">
-                        <img src="/assets/images/contact/phone.svg" alt="phone">
+                        <img src="../assets/images/contact/phone.svg" alt="phone">
                     </div>
                     <div class="contact_mail">
                         <a href="tel:+37496020999">+374 96 02 09 99</a>
                     </div>
                     <div class="contact_icon">
-                        <img src="/assets/images/contact/copy.svg" alt="copy">
+                        <img src="../assets/images/contact/copy.svg" alt="copy">
                     </div>
                 </div>
             </div>
             
             <div class="social">
-                <span>You may also find me on these platforms!</span>
+                <p>You may also find me on these platforms!</p>
                 <div class="social_links">
                     <a 
                         href="https://github.com/ArturBaghdanyan?tab=repositories"
                         target="_blank"
                     >
-                        <img src="/assets/images/contact/github.svg" alt="github">
+                        <img src="../assets/images/contact/github.svg" alt="github">
                     </a>
                     <a href="+37496020999" target="_blank">
-                        <img src="/assets/images/contact/telegram.svg" alt="telegram">
+                        <img src="../assets/images/contact/telegram.svg" alt="telegram">
                     </a>
                     <a href="@Artur Baghdanyan" target="_blank">
-                        <img src="/assets/images/contact/slack.svg" alt="slack">
+                        <img src="../assets/images/contact/slack.svg" alt="slack">
                     </a>
                 </div>
             </div>
         </div>
     </section> 
-    <footer>
+    <footer class="changed-background">
 		<div class="footer_text">
 			<img src="../assets/images/footer/copyright.svg" alt="copyright">
 			<p>2024 | Designed and coded with ❤️️ by User</p>
