@@ -50,6 +50,15 @@ const data = {
     ]
 };
 
+window.addEventListener('scroll', () => {
+  const header = document.getElementById('header');
+  if (window.scrollY > 0) {
+    header.classList.add('sticky');
+  } else {
+    header.classList.remove('sticky');
+  }
+});
+
 function showSideBar() {
     const nav = document.getElementById("header-nav");
     nav.style.display = 'flex';
