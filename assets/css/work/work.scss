@@ -103,7 +103,8 @@
 				align-items: center;
 
 				> .project_image {
-    			max-width: 100%;
+					width: 100%;
+    				max-width: 100%;
 					border-radius: 12px 12px 0 0;
 					height: auto;
 					padding: 2rem;
@@ -117,8 +118,10 @@
 				}
 				
 					> .projects_text {
-    				// max-width: 100%;
-						border-radius: 0 0 12px 12px !important;
+    				border-radius: 0 0 12px 12px !important;
+					max-width: 100%;
+					height: auto;
+					padding: 2rem;
 					}
 					
 				.projects_column_row:nth-child(2) {

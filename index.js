@@ -71,12 +71,14 @@ function hideSidebar() {
 
 let toggleIcons  = document.querySelectorAll("#icon");
 const body = document.querySelector('body');
-const lightModeDiv = document.getElementById('lightMode');
-const darkModeDiv = document.getElementById('darkMode');
+const desktopLightModeDiv = document.getElementById('desktopLightMode');
+const desktopDarkModeDiv = document.getElementById('desktopDarkMode');
+const mobileLightModeDiv = document.getElementById('mobileLightMode');
+const mobileDarkModeDiv = document.getElementById('mobileDarkMode');
 const lightIcons = document.querySelectorAll('.header_light-icon.theme-icon');
 const darkIcons = document.querySelectorAll('.header_dark-icon.theme-icon');
 const elementsToToggle = document.querySelectorAll(
-  '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece, .header_nav'
+  '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece, .mobile-nav'
 );
 const allText = document.querySelectorAll('p, li');
 const titleTexts = document.querySelectorAll('h3, a');
@@ -112,17 +114,18 @@ toggleIcons.forEach(toggle => {
     toggleIconsVisibility();
 
     if (body.classList.contains('dark-theme')) {
-      lightModeDiv.style.display = 'none';
-      darkModeDiv.style.display = 'flex';
-      lightIcon.style.display = 'flex';
-      darkIcon.style.display = 'none';
-    } else {
-      lightModeDiv.style.display = 'flex';
-      darkModeDiv.style.display = 'none';
-      darkIcon.style.display = 'flex';
-      lightIcon.style.display = 'none';
+      desktopLightModeDiv.style.display = 'none';
+      desktopDarkModeDiv.style.display = 'flex';
+      mobileLightModeDiv.style.display = 'none';
+      mobileDarkModeDiv.style.display = 'flex';
+    }  else {
+      desktopLightModeDiv.style.display = 'flex';
+      desktopDarkModeDiv.style.display = 'none';
+      mobileLightModeDiv.style.display = 'flex';
+      mobileDarkModeDiv.style.display = 'none';
     }
   });
+  
 });
 toggleIconsVisibility();
 
@@ -136,9 +139,10 @@ listSkills.forEach(i => {
 				<img src="${i.img}" alt="img">
 				<span>${i.text}</span>
 			</div>
-          `
+          `;
 		languageSkills.insertAdjacentHTML('beforeend', listHTML);
 });
+
 });
 
 const projectsContainer = document.getElementById('projects');
