@@ -53,6 +53,7 @@ main {
 					display: flex;
 					align-items: center;
 					column-gap: 12px;
+					
 					span {
 						color: rgba(75, 85, 99, 1);
 						font-size: 16px;
@@ -95,10 +96,14 @@ main {
 				width: 100%;
 				display: flex;
 				align-items: start;
+
 				> .user h1 {
-					font-size: 20px;
+					font-size: 18px;
 				}
+			& .personal_texture {
+				font-size: 14px !important;
 			}
+		}
 		}
 	}
 	@media only screen and (min-width: 602px) and (max-width: 768px) {
@@ -107,12 +112,12 @@ main {
 			flex-direction: column-reverse;
 			align-items: center;
 			row-gap: 20px;
-			// padding: 2rem 5rem 2rem 5rem;
 
 			.personal-text {
 				width: 100%;
 				display: flex;
 				align-items: start;
+
 				> .user h1 {
 					font-size: 24px;
 				}
@@ -124,7 +129,6 @@ main {
 			display: flex;
 			align-items: center;
 			row-gap: 20px;
-			// padding: 2rem !important;
 
 			.personal-text {
 				padding-right: 2rem;
@@ -195,7 +199,9 @@ main {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
+		text-align: center;
 		row-gap: 16px;
+		margin: 20px;
 
 	& span {
 		height: 28px;

@@ -15,6 +15,7 @@
 }
 
 	& .projects_column {
+		width: 100%;
 		display: flex;
 		flex-direction: column;
 		row-gap: 48px;
@@ -31,7 +32,7 @@
 				border: 1px;
 				padding: 48px;
 				flex: 1;
-				max-width: 50%;
+				width: 50%;
 				height: 480px;
 
 				> img {
@@ -42,6 +43,7 @@
 				}
 			}
 			> .projects_text {
+				width: 50%;
 				display: flex;
 				flex: 1;
 				flex-direction: column;
@@ -50,7 +52,6 @@
 				border-radius: 0 12px 12px 0;
 				padding: 48px;
 				row-gap: 24px;
-				max-width: 50%;
 
 				& .project_description {
 					display: flex;
@@ -68,6 +69,15 @@
 						color: rgba(75, 85, 99, 1);
 					}
 				}
+				.project_skills-icon {
+					width: 100%;
+					height: 36px;
+
+					> img {
+						max-width: 100%;
+						height: 36px;
+					}
+				}
 			}
 		}
 		
@@ -79,7 +89,7 @@
 			.projects_column_row {
 				flex-direction: column !important;
 				align-items: center;
-				padding: 2rem;
+				padding: 20px;
 
 				> .project_image {
 					flex: 1;
@@ -91,6 +101,11 @@
 						height: auto;
 					}
 				}
+					> .projects_text {
+						width: 100% !important;
+						padding: 20px;
+					}
+				
 		
 				.projects_column_row:nth-child(2) {
 					flex-direction: column;
@@ -101,16 +116,16 @@
 			.projects_column_row {
 				flex-direction: column !important;
 				align-items: center;
+				padding: 20px;
 
 				> .project_image {
 					width: 100%;
-    				max-width: 100%;
 					border-radius: 12px 12px 0 0;
 					height: auto;
 					padding: 2rem;
 
 					& img {
-						width: 100%;
+						max-width: 100%;
 						height: auto !important;
 						object-fit: cover;
 						border-radius: 12px 12px 0 0 !important;
@@ -118,13 +133,14 @@
 				}
 				
 					> .projects_text {
-    				border-radius: 0 0 12px 12px !important;
-					max-width: 100%;
-					height: auto;
-					padding: 2rem;
+						border-radius: 0 0 12px 12px !important;
+						width: 100% !important;
+						height: auto; 
+						padding: 2rem;
 					}
 					
 				.projects_column_row:nth-child(2) {
+					padding: 20px;
 					flex-direction: column;
 				}
 			}
@@ -163,5 +179,12 @@
 				flex-direction: column;
 			  }
 		}
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.work {
+		padding: 20px !important;
+		margin: auto;
 	}
 }

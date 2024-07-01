@@ -78,8 +78,9 @@ const mobileDarkModeDiv = document.getElementById('mobileDarkMode');
 const lightIcons = document.querySelectorAll('.header_light-icon.theme-icon');
 const darkIcons = document.querySelectorAll('.header_dark-icon.theme-icon');
 const elementsToToggle = document.querySelectorAll(
-  '.changed-background, .testimionals_row_piece, .projects_text, .columns_piece, .mobile-nav'
+  '.changed-background, .testimionals_row_piece, .projects_text, .mobile-nav'
 );
+const columns = document.querySelector('.columns_piece');
 const allText = document.querySelectorAll('p, li');
 const titleTexts = document.querySelectorAll('h3, a');
 const allSpans = document.querySelectorAll('section span');
@@ -106,11 +107,12 @@ toggleIcons.forEach(toggle => {
   toggle.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
 
-    toggleClassAndStyle(elementsToToggle, 'dark-theme', { backgroundColor: 'rgba(31, 41, 55, 1)' }, { backgroundColor: 'rgb(255, 255, 255)' });
+    toggleClassAndStyle(elementsToToggle, 'dark-theme', { backgroundColor: 'rgba(31, 41, 55, 1)' }, { background: 'rgba(249, 250, 251, 1)' });
     toggleClassAndStyle(titleTexts, 'dark-theme', { color: 'rgba(249, 250, 251, 1)' }, { color: 'rgb(75, 85, 99)' });
     toggleClassAndStyle(allText, 'dark-theme', { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' });
     toggleClassAndStyle(allSpans, 'dark-theme', { background: 'rgba(55, 65, 81, 1)' }, { background: 'rgba(229, 231, 235, 1)' });
-
+    toggleClassAndStyle(columns, 'dark-theme', { background: 'rgba(31, 41, 55, 1)' }, { background: 'rgba(255, 255, 255, 1)' })
+    
     toggleIconsVisibility();
 
     if (body.classList.contains('dark-theme')) {
@@ -159,7 +161,7 @@ data.work.forEach((project, index) => {
 			<h2>${project.title}</h2>
 			<p>${project.description}</p>
 			<div class="project_description">${itemsHTML}</div>
-			<div>
+			<div class="project_skills-icon">
 				<img src="${project.skillImgSrc}" alt="skill">
 			</div>
 		</div>

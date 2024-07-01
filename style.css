@@ -123,7 +123,10 @@ main .personal .image > img {
             align-items: start;
   }
   main .personal .personal-text > .user h1 {
-    font-size: 20px;
+    font-size: 18px;
+  }
+  main .personal .personal-text .personal_texture {
+    font-size: 14px !important;
   }
 }
 @media only screen and (min-width: 602px) and (max-width: 768px) {
@@ -262,7 +265,9 @@ main .personal .image > img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  text-align: center;
   row-gap: 16px;
+  margin: 20px;
 }
 .experience .experience_title span {
   height: 28px;
