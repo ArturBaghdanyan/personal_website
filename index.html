@@ -53,20 +53,20 @@
 				<div class="header_light-icon theme-icon">
 					<img src="assets/images/header/light-tt.svg" alt="light-tt">
 				</div>
-				<span class="close_btn" onclick="hideSidebar()">
+				<div class="close_btn" onclick="hideSidebar()">
 					<img src="assets/images/header/close.svg" alt="menu">
-				</span>
+				</div>
 			</div>
 			<nav>
-				<a href="/html/about.html" target="_blank">About</a>
-				<a href="/html/work.html" target="_blank">Work</a>
-				<a href="/html/testimonials.html" target="_blank">Testimonials</a>
-				<a href="/html/contact.html" target="_blank">Contact</a>
+				<a href="#about">About</a>
+				<a href="#work">Work</a>
+				<a href="#testimionals-bg">Testimonials</a>
+				<a href="#contact">Contact</a>
 			</nav>
 
 			<div id="mobileLightMode" class="light-mode">
 				<div>
-					<span>Switch theme</span>
+					<p>Switch theme</p>
 					<img src="assets/images/header/lightMode.svg" alt="light-mode" id="icon">
 				</div>
 				<button class="download-button">Download CV</button>
@@ -74,7 +74,7 @@
 
 			<div id="mobileDarkMode" class="dark-mode">
 				<div>
-					<span>Switch theme</span>
+					<p>Switch theme</p>
 					<img src="assets/images/header/darkMode.svg" alt="dark-mode" id="icon">
 				</div>
 				<button class="download-button">Download CV</button>
@@ -134,7 +134,7 @@
 			</div>
 		</section>
 
-		<section class="about changed-background">
+		<section class="about changed-background" id="about">
 			<div class="about-container container">
 				
 				<span class="title">About me</span>
@@ -285,7 +285,7 @@
 		</section>
 
 
-		<section class="work container">
+		<section id="work" class="work container">
 			<div class="work_title">
 				<span class="title">Work</span>
 				<p>Some of the noteworthy projects I have built:</p>
@@ -348,7 +348,7 @@
 			</div>
 		</section>
 
-		<section>
+		<section id="contact">
 			<div class="contact container">
 				<div class="contact_title">
 					<span class="title">Get in touch</span>

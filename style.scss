@@ -21,7 +21,7 @@ main {
 	.personal {
 		display: flex;
 		justify-content: space-between;
-
+		
 		.personal-text {
 			width: 60%;
 			display: flex;
@@ -90,7 +90,7 @@ main {
 			flex-direction: column-reverse;
 			align-items: center;
 			row-gap: 20px;
-			padding: 0 16px;
+			padding: 6rem 1rem;
 
 			.personal-text {
 				width: 100%;
@@ -228,6 +228,7 @@ main {
 
 		.columns_piece {
 			background: rgba(255, 255, 255, 1);
+			box-shadow: 1px 1px rgba(0, 0, 0, 0.06);
 			border-radius: 12px;
 			padding: 32px;
 			display: grid;

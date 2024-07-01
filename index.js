@@ -78,12 +78,10 @@ const mobileDarkModeDiv = document.getElementById('mobileDarkMode');
 const lightIcons = document.querySelectorAll('.header_light-icon.theme-icon');
 const darkIcons = document.querySelectorAll('.header_dark-icon.theme-icon');
 const elementsToToggle = document.querySelectorAll(
-  '.changed-background, .testimionals_row_piece, .projects_text, .mobile-nav'
+  '.changed-background, .testimionals_row_piece, .projects_text, .mobile-nav', '.columns', '.columns_piece', '.project_image', '.projects_text'
 );
-const columns = document.querySelector('.columns_piece');
-const allText = document.querySelectorAll('p, li');
 const titleTexts = document.querySelectorAll('h3, a');
-const allSpans = document.querySelectorAll('section span');
+const allSpans = document.querySelectorAll('span');
 
 
 const toggleIconsVisibility = () => {
@@ -109,10 +107,15 @@ toggleIcons.forEach(toggle => {
 
     toggleClassAndStyle(elementsToToggle, 'dark-theme', { backgroundColor: 'rgba(31, 41, 55, 1)' }, { background: 'rgba(249, 250, 251, 1)' });
     toggleClassAndStyle(titleTexts, 'dark-theme', { color: 'rgba(249, 250, 251, 1)' }, { color: 'rgb(75, 85, 99)' });
-    toggleClassAndStyle(allText, 'dark-theme', { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' });
-    toggleClassAndStyle(allSpans, 'dark-theme', { background: 'rgba(55, 65, 81, 1)' }, { background: 'rgba(229, 231, 235, 1)' });
-    toggleClassAndStyle(columns, 'dark-theme', { background: 'rgba(31, 41, 55, 1)' }, { background: 'rgba(255, 255, 255, 1)' })
-    
+    toggleClassAndStyle(document.querySelectorAll('p, li'), 'dark-theme', 
+    { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' })
+    toggleClassAndStyle(allSpans, 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
+    toggleClassAndStyle(document.querySelectorAll('.work span'), 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
+    toggleClassAndStyle(document.querySelectorAll('.columns_piece'), 'dark-theme', { background: 'rgba(17, 24, 39, 1)', boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.15)' }, { background: 'rgba(255, 255, 255, 1)' })
+    toggleClassAndStyle(document.querySelectorAll('.project_image'), 'dark-theme', { background: 'rgba(55, 65, 81, 1)' }, { background: 'rgb(243, 244, 246)' })
+    toggleClassAndStyle(document.querySelectorAll('.projects_text'), 'dark-theme', { background: 'rgba(31, 41, 55, 1)' }, { background: 'rgb(255, 255, 255)' })
+
+
     toggleIconsVisibility();
 
     if (body.classList.contains('dark-theme')) {

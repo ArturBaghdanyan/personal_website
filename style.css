@@ -111,7 +111,7 @@ main .personal .image > img {
         -ms-flex-align: center;
             align-items: center;
     row-gap: 20px;
-    padding: 0 16px;
+    padding: 6rem 1rem;
   }
   main .personal .personal-text {
     width: 100%;
@@ -300,6 +300,8 @@ main .personal .image > img {
 }
 .experience .columns .columns_piece {
   background: rgb(255, 255, 255);
+  -webkit-box-shadow: 1px 1px rgba(0, 0, 0, 0.06);
+          box-shadow: 1px 1px rgba(0, 0, 0, 0.06);
   border-radius: 12px;
   padding: 32px;
   display: -ms-grid;
