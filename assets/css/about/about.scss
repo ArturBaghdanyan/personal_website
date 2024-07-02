@@ -100,14 +100,15 @@
 			row-gap: 20px;
 
 			> .about-image {
-				width: 100%;
-				height: 520px;
-				display: flex;
-				justify-content: center;
+				width: 400px;
+				max-width: 100%;
+				height: 450px;
+				display: flex;	
+				margin: auto;
 				
 			> img {
-				width: 440px;
-				height: 520px;
+				max-width: 100%;
+				height: 450px;
 			}
 		}
 		.about_texture {
@@ -128,14 +129,14 @@
 		row-gap: 20px;
 
 		> .about-image {
-			width: 100%;
-			height: 380px;
+			max-width: 260px;
+			height: 360px;
 			display: flex;
-			justify-content: center;
+			margin: auto;
 
 		> img {
 			max-width: 100%;
-			height: 100%;
+			height: 360px;
 		}
 	}
 	.about_texture > h3 {

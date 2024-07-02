@@ -46,7 +46,7 @@
 }
 .work .projects_column .projects_column_row > .project_image {
   background: rgb(243, 244, 246);
-  border-radius: 0 12px 12px 0;
+  border-radius: 12px 0 0 12px;
   border: 1px;
   padding: 48px;
   -webkit-box-flex: 1;
@@ -146,44 +146,6 @@
             flex-direction: column;
   }
 }
-@media only screen and (min-width: 376px) and (max-width: 768px) {
-  .work .projects_column .projects_column_row {
-    -webkit-box-orient: vertical !important;
-    -webkit-box-direction: normal !important;
-        -ms-flex-direction: column !important;
-            flex-direction: column !important;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    padding: 20px;
-  }
-  .work .projects_column .projects_column_row > .project_image {
-    width: 100%;
-    border-radius: 12px 12px 0 0;
-    height: auto;
-    padding: 2rem;
-  }
-  .work .projects_column .projects_column_row > .project_image img {
-    max-width: 100%;
-    height: auto !important;
-    -o-object-fit: cover;
-       object-fit: cover;
-    border-radius: 12px 12px 0 0 !important;
-  }
-  .work .projects_column .projects_column_row > .projects_text {
-    border-radius: 0 0 12px 12px !important;
-    width: 100% !important;
-    height: auto;
-    padding: 2rem;
-  }
-  .work .projects_column .projects_column_row .projects_column_row:nth-child(2) {
-    padding: 20px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-  }
-}
 @media only screen and (min-width: 769px) and (max-width: 992px) {
   .work .projects_column .projects_column_row {
     -webkit-box-orient: vertical !important;
@@ -218,10 +180,51 @@
             flex-direction: column;
   }
 }
+@media only screen and (min-width: 376px) and (max-width: 768px) {
+  .work .projects_column {
+    row-gap: 24px;
+  }
+  .work .projects_column .projects_column_row {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0 20px;
+  }
+  .work .projects_column .projects_column_row > .project_image {
+    width: 100%;
+    border-radius: 12px 12px 0 0;
+    height: auto;
+    padding: 2rem;
+  }
+  .work .projects_column .projects_column_row > .project_image img {
+    max-width: 100%;
+    height: auto !important;
+    -o-object-fit: cover;
+       object-fit: cover;
+    border-radius: 12px 12px 0 0 !important;
+  }
+  .work .projects_column .projects_column_row > .projects_text {
+    border-radius: 0 0 12px 12px !important;
+    width: 100% !important;
+    height: auto;
+    padding: 2rem;
+  }
+  .work .projects_column .projects_column_row .projects_column_row:nth-child(2) {
+    padding: 20px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
 @media screen and (max-width: 768px) {
   .work {
-    padding: 20px !important;
+    padding: 64px 20px;
     margin: auto;
   }
 }

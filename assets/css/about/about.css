@@ -125,18 +125,17 @@
     row-gap: 20px;
   }
   .about .about-container .about_text > .about-image {
-    width: 100%;
-    height: 520px;
+    width: 400px;
+    max-width: 100%;
+    height: 450px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: auto;
   }
   .about .about-container .about_text > .about-image > img {
-    width: 440px;
-    height: 520px;
+    max-width: 100%;
+    height: 450px;
   }
   .about .about-container .about_text .about_texture {
     width: 100%;
@@ -161,18 +160,16 @@
     row-gap: 20px;
   }
   .about .about-container .about_text > .about-image {
-    width: 100%;
-    height: 380px;
+    max-width: 260px;
+    height: 360px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    margin: auto;
   }
   .about .about-container .about_text > .about-image > img {
     max-width: 100%;
-    height: 100%;
+    height: 360px;
   }
   .about .about-container .about_text .about_texture > h3 {
     font-size: 24px;

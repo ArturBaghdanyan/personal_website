@@ -98,6 +98,17 @@ main .personal .image > img {
   width: 100%;
   height: 360px;
 }
+@media only screen and (max-width: 380px) {
+  main .personal .image {
+    max-width: 240px;
+    width: 100%;
+    height: 280px;
+  }
+  main .personal .image > img {
+    max-width: 100%;
+    height: 280px;
+  }
+}
 @media only screen and (max-width: 600px) {
   main .personal {
     display: -webkit-box;
@@ -424,4 +435,10 @@ footer .footer_text {
 footer .footer_text > img {
   width: 16px;
   height: 16px;
+}
+@media only screen and (max-width: 400px) {
+  footer .footer_text {
+    font-size: 14px;
+    padding: 0 20px;
+  }
 }
