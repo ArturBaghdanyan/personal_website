@@ -1,20 +1,98 @@
 const listSkills = [
-	{ "id": 1, "img": "./assets/images/skills/javascript.svg", "text": "Javascript" },
-	{ "id": 2, "img": "./assets/images/skills/typescript.svg", "text": "Typescript" },
-	{ "id": 3, "img": "./assets/images/skills/react.svg", "text": "React" },
-	{ "id": 4, "img": "./assets/images/skills/next.svg", "text": "Next.js" },
-	{ "id": 5, "img": "./assets/images/skills/nodejs.svg", "text": "Node.js" },
-	{ "id": 6, "img": "./assets/images/skills/express.svg", "text": "Express.js" },
-	{ "id": 7, "img": "./assets/images/skills/nest.svg", "text": "Nest.js" },
-	{ "id": 8, "img": "./assets/images/skills/socket.svg", "text": "Socket.io" },
-	{ "id": 9, "img": "./assets/images/skills/postgreSQL.svg", "text": "PostgreSQL" },
-	{ "id": 10, "img": "./assets/images/skills/mongoDB.svg", "text": "MongoDB" },
-	{ "id": 11, "img": "./assets/images/skills/sass.svg", "text": "Sass/Scss" },
-	{ "id": 12, "img": "./assets/images/skills/tailwindCss.svg", "text": "Tailwindcss" },
-	{ "id": 13, "img": "./assets/images/skills/figma.svg", "text": "Figma" },
-	{ "id": 14, "img": "./assets/images/skills/cypress.svg", "text": "Cypress" },
-	{ "id": 15, "img": "./assets/images/skills/storybook.svg", "text": "StoryBook" },
-	{ "id": 16, "img": "./assets/images/skills/git.svg", "text": "Git" }
+	{ 
+    "id": 1, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/javascript.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/javascript.svg",
+    "text": "Javascript" 
+  },
+	{ 
+    "id": 2, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/typescript.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/typescript.svg",
+    "text": "Typescript" 
+  },
+	{ 
+    "id": 3, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/react.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/react.svg", 
+    "text": "React" },
+	{ 
+    "id": 4, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/next.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/next.svg", 
+    "text": "Next.js" 
+  },
+	{ 
+    "id": 5, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/nodejs.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/nodejs.svg",
+    "text": "Node.js" 
+  },
+	{ 
+    "id": 6, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/express.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/express.svg", 
+    "text": "Express.js" },
+	{ 
+    "id": 7, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/nest.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/nest.svg", 
+    "text": "Nest.js" 
+  },
+	{ 
+    "id": 8, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/socket.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/socket.svg",
+    "text": "Socket.io" 
+  },
+	{ 
+    "id": 9, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/postgreSQL.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/postgreSQL.svg", 
+    "text": "PostgreSQL" 
+  },
+	{ 
+    "id": 10, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/mongoDB.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/mongoDB.svg",
+    "text": "MongoDB" 
+  },
+	{ 
+    "id": 11, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/sass.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/sass.svg", 
+    "text": "Sass/Scss" 
+  },
+	{ 
+    "id": 12, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/tailwindCss.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/tailwindCss.svg", 
+    "text": "Tailwindcss" 
+  },
+	{ 
+    "id": 13, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/figma.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/figma.svg",
+    "text": "Figma" 
+  },
+	{ 
+    "id": 14, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/cypress.svg", 
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/cypress.svg",
+    "text": "Cypress" 
+  },
+	{ 
+    "id": 15, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/storybook.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/storybook.svg", 
+    "text": "StoryBook" 
+  },
+	{ 
+    "id": 16, 
+    "lightImgSrc": "./assets/images/skills/lightmode-icons/git.svg",
+    "darkImgSrc": "./assets/images/skills/darkmode-icons/git.svg", 
+    "text": "Git" 
+  }
 ];
 
 
@@ -105,10 +183,15 @@ toggleIcons.forEach(toggle => {
   toggle.addEventListener('click', () => {
     body.classList.toggle('dark-theme');
 
+    updateSkillsIcons();
+    toggleIconsVisibility();
+
     toggleClassAndStyle(elementsToToggle, 'dark-theme', { backgroundColor: 'rgba(31, 41, 55, 1)' }, { background: 'rgba(249, 250, 251, 1)' });
     toggleClassAndStyle(titleTexts, 'dark-theme', { color: 'rgba(249, 250, 251, 1)' }, { color: 'rgb(75, 85, 99)' });
     toggleClassAndStyle(document.querySelectorAll('p, li'), 'dark-theme', 
-    { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' })
+    { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgb(75, 85, 99)' });
+    toggleClassAndStyle(document.querySelectorAll('.skills_name span'), 'dark-theme', { color: 'rgba(209, 213, 219, 1)' }, { color: 'rgba(75, 85, 99, 1)' });
+
     toggleClassAndStyle(allSpans, 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
     toggleClassAndStyle(document.querySelectorAll('.work span'), 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
     toggleClassAndStyle(document.querySelectorAll('.columns_piece'), 'dark-theme', { background: 'rgba(17, 24, 39, 1)', boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.15)' }, { background: 'rgba(255, 255, 255, 1)' })
@@ -134,21 +217,22 @@ toggleIcons.forEach(toggle => {
 });
 toggleIconsVisibility();
 
-document.addEventListener('DOMContentLoaded', () => {
+function updateSkillsIcons() {
+  let languageSkills = document.getElementById('my-skills');
+  languageSkills.innerHTML = ''; 
 
-let languageSkills = document.getElementById('my-skills');
-
-listSkills.forEach(i => {
+  listSkills.forEach(skill => {
+    const imgSrc = body.classList.contains('dark-theme') ? skill.darkImgSrc : skill.lightImgSrc;
     const listHTML = `
-			<div class="language" key=${i.id}>
-				<img src="${i.img}" alt="img">
-				<span>${i.text}</span>
-			</div>
-          `;
-		languageSkills.insertAdjacentHTML('beforeend', listHTML);
-});
-
-});
+      <div class="language" key=${skill.id}>
+        <img src="${imgSrc}" alt="img">
+        <span>${skill.text}</span>
+      </div>
+    `;
+    languageSkills.insertAdjacentHTML('beforeend', listHTML);
+  });
+}
+updateSkillsIcons();
 
 const projectsContainer = document.getElementById('projects');
 
