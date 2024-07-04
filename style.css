@@ -371,7 +371,7 @@ main .personal .image > img {
 }
 @media only screen and (min-width: 678px) and (max-width: 992px) {
   .experience .columns {
-    padding: 70px 2rem;
+    padding: 1rem 2rem;
   }
   .experience .columns .columns_piece {
     display: -ms-grid;
