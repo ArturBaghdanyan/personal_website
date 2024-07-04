@@ -214,6 +214,8 @@ main .personal .image > img {
 }
 .skills .skills_name {
   width: 100%;
+  max-width: calc(100% - 20px);
+  margin: auto;
   display: -ms-grid;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
@@ -244,7 +246,21 @@ main .personal .image > img {
   height: 56px;
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 375px) {
+  .skills {
+    padding: 2rem !important;
+  }
+  .skills .skills_name {
+    max-width: 100%;
+    -webkit-column-gap: 30px;
+       -moz-column-gap: 30px;
+            column-gap: 30px;
+    display: -ms-grid;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+  }
+}
+@media only screen and (min-width: 376px) and (max-width: 992px) {
   .skills {
     padding: 2rem !important;
   }

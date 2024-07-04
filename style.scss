@@ -170,6 +170,8 @@ main {
 }
 	.skills_name {
 		width: 100%;
+		max-width: calc(100% - 20px);
+		margin: auto;
 		display: grid;
 		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
     	column-gap: 60px;
@@ -190,7 +192,20 @@ main {
 }
 }
 
-@media only screen and (max-width: 992px) {
+@media only screen and (max-width: 375px) {
+	.skills {
+		padding: 2rem !important;
+		
+		 .skills_name {
+			max-width: 100%;
+			column-gap: 30px;
+			display: grid;
+			grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
+		}
+	}
+}
+
+@media only screen and (min-width: 376px) and (max-width: 992px) {
 	.skills {
 		padding: 2rem !important;
 		

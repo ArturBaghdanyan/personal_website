@@ -27,15 +27,39 @@
 							padding-right: 20px;
 					
 							> a {
-								text-decoration: none;
+								position: relative;
+    						text-decoration: none;
 								color: rgba(75, 85, 99, 1);
 								font-weight: 500;
 							}
-							 a:hover, a:active {
-								color: red;
+							a::after {
+								content: '';
+								position: absolute;
+								left: 0;
+								bottom: -2px;
+								width: 0;
+								height: 2px;
+								background-color: red;
+								transition: width 0.3s ease-out;
 							}
-							
+							a:hover::before, a:focus::before {
+								transform-origin: left top;
+								transform: scale(1, 1);
+						}
+							a:hover::after, 
+							a:focus::after {
+									width: 100%; 
+							}
+
+							a.visited::after {
+									width: 100%;
+							}
 					}
+			}
+
+
+			.header_menu {
+				display: none;
 			}
 			@media screen and (max-width: 800px) {
 					.nav {
@@ -56,11 +80,11 @@
 					position: fixed;
 					z-index: 999;
 					top: 0;
-					right: 0;
+					right: -250px;
 					background-color: white;
 					box-shadow: -10px 0 10px rgba(0,0,0,1);
 					overflow-x: hidden;
-					transition: 0.5s;
+					transition: right 2s;
 					padding: 10px 0;
 					row-gap: 25px;
 
@@ -77,13 +101,28 @@
 							border-top: 1px solid gray; 
 							border-bottom: 1px solid gray;
 							padding: 20px 10px;
-
+							position: relative;
+							transition: all 0.3s;
 								> a {
 									text-decoration: none;
 									color: rgba(75, 85, 99, 1);
-									font-weight: 500;
-								}
+									font-weight: 500;			
+							}
+								
+								& :hover, :active{
+									display: inline-block;
+									transition: all 0.3s;
+									width: auto;
+									color: white;
+									padding: 8px 10px;
+									border-radius: 8px;    
+									border-left: 2px solid #e669fb;
+									background-color: #42465a;      
 					}
+					
+				}
+				 
+					
 
 			.nav_title {
 					width: 100%;
@@ -99,6 +138,7 @@
 			.close_btn {
 					width: 30px;
 					height: 30px;
+					cursor: pointer;
 
 					> img {
 						width: 30px;
@@ -111,7 +151,9 @@
 				}
 			}
 			}
-	
+			.mobile-nav.open {
+				right: 0;
+		}
 			.light-mode {
 					display: flex;
 					justify-content: space-between;
@@ -171,6 +213,7 @@
 
 				.header_menu {
 						display: flex;
+						cursor: pointer;
 				}
 
 				.light-mode {
@@ -194,6 +237,7 @@
 
 			.header_menu {
 					display: flex;
+					cursor: pointer;
 			}
 
 			.light-mode {
@@ -202,7 +246,7 @@
 					flex-direction: column;
 					row-gap: 20px;
 					padding: 0 10px;
-
+					cursor: pointer;
 					> div {
 							display: flex;
 							justify-content: space-between;
@@ -217,6 +261,7 @@
 				flex-direction: column;
 				row-gap: 15px;
 				padding: 0 10px;
+				cursor: pointer;
 
 				> div {
 					width: 100%;

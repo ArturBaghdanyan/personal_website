@@ -23,6 +23,14 @@ html, body {
       }
   }	
 
+  .columns .animate {
+    transition: 2s ease;
+    transform: translateX(-100%);
+  }
+  .columns.show-animate .animate {
+    transform: translateX(0);
+  }
+
 body.dark-theme {
     background-color: rgba(3, 7, 18, 1) !important;
     color: white;
@@ -55,4 +63,9 @@ body.dark-theme {
     font-size: 14px;
     border-radius: 12px;
     background-color: rgba(229, 231, 235, 1);
+}
+
+
+a, div > img, a, button {
+    cursor: pointer;
 }

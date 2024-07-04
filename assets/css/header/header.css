@@ -41,12 +41,37 @@
   padding-right: 20px;
 }
 .header .nav > nav > a {
+  position: relative;
   text-decoration: none;
   color: rgb(75, 85, 99);
   font-weight: 500;
 }
-.header .nav > nav a:hover, .header .nav > nav a:active {
-  color: red;
+.header .nav > nav a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -2px;
+  width: 0;
+  height: 2px;
+  background-color: red;
+  -webkit-transition: width 0.3s ease-out;
+  transition: width 0.3s ease-out;
+}
+.header .nav > nav a:hover::before, .header .nav > nav a:focus::before {
+  -webkit-transform-origin: left top;
+          transform-origin: left top;
+  -webkit-transform: scale(1, 1);
+          transform: scale(1, 1);
+}
+.header .nav > nav a:hover::after,
+.header .nav > nav a:focus::after {
+  width: 100%;
+}
+.header .nav > nav a.visited::after {
+  width: 100%;
+}
+.header .header_menu {
+  display: none;
 }
 @media screen and (max-width: 800px) {
   .header .nav {
@@ -75,13 +100,13 @@
   position: fixed;
   z-index: 999;
   top: 0;
-  right: 0;
+  right: -250px;
   background-color: white;
   -webkit-box-shadow: -10px 0 10px rgb(0, 0, 0);
           box-shadow: -10px 0 10px rgb(0, 0, 0);
   overflow-x: hidden;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: right 2s;
+  transition: right 2s;
   padding: 10px 0;
   row-gap: 25px;
 }
@@ -105,11 +130,25 @@
   border-top: 1px solid gray;
   border-bottom: 1px solid gray;
   padding: 20px 10px;
+  position: relative;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
 }
 .header .mobile-nav > nav > a {
   text-decoration: none;
   color: rgb(75, 85, 99);
   font-weight: 500;
+}
+.header .mobile-nav > nav :hover, .header .mobile-nav > nav :active {
+  display: inline-block;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: auto;
+  color: white;
+  padding: 8px 10px;
+  border-radius: 8px;
+  border-left: 2px solid #e669fb;
+  background-color: #42465a;
 }
 .header .mobile-nav .nav_title {
   width: 100%;
@@ -128,6 +167,7 @@
 .header .mobile-nav .nav_title .close_btn {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 .header .mobile-nav .nav_title .close_btn > img {
   width: 30px;
@@ -142,6 +182,9 @@
       -ms-flex-align: center;
           align-items: center;
   font-size: 30px;
+}
+.header .mobile-nav.open {
+  right: 0;
 }
 .header .light-mode {
   display: -webkit-box;
@@ -214,6 +257,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    cursor: pointer;
   }
   .header .light-mode {
     width: 100%;
@@ -246,6 +290,7 @@
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    cursor: pointer;
   }
   .header .light-mode {
     width: 100%;
@@ -258,6 +303,7 @@
             flex-direction: column;
     row-gap: 20px;
     padding: 0 10px;
+    cursor: pointer;
   }
   .header .light-mode > div {
     display: -webkit-box;
@@ -279,6 +325,7 @@
             flex-direction: column;
     row-gap: 15px;
     padding: 0 10px;
+    cursor: pointer;
   }
   .header .dark-mode > div {
     width: 100%;
