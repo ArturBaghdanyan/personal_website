@@ -173,10 +173,10 @@ main {
 }
 	.skills_name {
 		width: 100%;
-		max-width: calc(100% - 20px);
+		max-width: 80%;
 		margin: auto;
-		display: grid;
-		grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+		display: flex;
+		flex-wrap: wrap;
     	column-gap: 60px;
 		margin-top: 30px;
 		row-gap: 30px;
@@ -202,8 +202,6 @@ main {
 		 .skills_name {
 			max-width: 100%;
 			column-gap: 30px;
-			display: grid;
-			grid-template-columns: repeat(auto-fill, minmax(60px, 1fr));
 		}
 	}
 }

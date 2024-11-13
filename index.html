@@ -53,15 +53,15 @@
 				<div class="header_light-icon theme-icon">
 					<img src="assets/images/header/light-tt.svg" alt="light-tt">
 				</div>
-				<div class="close_btn" onclick="hideSidebar()">
+				<div class="close_btn hide-sidebar">
 					<img src="assets/images/header/close.svg" alt="menu">
 				</div>
 			</div>
 			<nav>
-				<a href="#about" onclick="hideSidebar()">About</a>
-				<a href="#work" onclick="hideSidebar()">Work</a>
-				<a href="#testimionals-bg" onclick="hideSidebar()">Testimonials</a>
-				<a href="#contact" onclick="hideSidebar()">Contact</a>
+				<a href="#about" class="hide-sidebar">About</a>
+				<a href="#work" class="hide-sidebar">Work</a>
+				<a href="#testimionals-bg" class="hide-sidebar">Testimonials</a>
+				<a href="#contact" class="hide-sidebar">Contact</a>
 			</nav>
 
 			<div id="mobileLightMode" class="light-mode">
@@ -82,7 +82,7 @@
 
 		</div>
 
-		<div class="header_menu" id="mobile-menu" onclick="showSideBar()">
+		<div class="header_menu" id="mobile-menu">
 			<img src="assets/images/header/menu.svg" alt="close-button">
 		</div>
 
@@ -403,13 +403,16 @@
 	</main>
 
 
-		<footer class="changed-background">
-			<div class="footer_text">
-				<img src="assets/images/footer/copyright.svg" alt="copyright">
-				<p>2024 | Designed and coded with ❤️️ by User</p>
-			</div>
-		</footer>
+	<footer class="changed-background">
+		<div class="footer_text">
+			<img src="assets/images/footer/copyright.svg" alt="copyright">
+			<p>2024 | Designed and coded with ❤️️ by User</p>
+		</div>
+	</footer>
 
-<script src="index.js"></script>
+	<script type="module" src="./script/skills.js"></script>
+	<script type="module" src="./script/workList.js"></script>
+	<script type="module" src="./script/menu.js"></script>
+	<script type="module" src="./index.js" defer></script>
 </body>
 </html>

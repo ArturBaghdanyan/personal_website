@@ -22,14 +22,7 @@ html, body {
           padding: 4rem 2rem;
       }
   }	
-
-  .columns .animate {
-    transition: 2s ease;
-    transform: translateX(-100%);
-  }
-  .columns.show-animate .animate {
-    transform: translateX(0);
-  }
+ */
 
 body.dark-theme {
     background-color: rgba(3, 7, 18, 1) !important;
@@ -70,7 +63,6 @@ a, div > img, a, button {
     cursor: pointer;
 }
 
-/* HTML: <div class="loader"></div> */
 .loader {
     width: 12px;
     aspect-ratio: 1;
