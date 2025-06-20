@@ -21,8 +21,7 @@ html, body {
       .container {
           padding: 4rem 2rem;
       }
-  }	
- */
+  }
 
 body.dark-theme {
     background-color: rgba(3, 7, 18, 1) !important;

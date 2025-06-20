@@ -90,9 +90,9 @@ const toggleTheme = () => {
 
     toggleClassAndStyle(allSpans, 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
     toggleClassAndStyle(document.querySelectorAll('.work span'), 'dark-theme', { color: 'rgba(209, 213, 219, 1)', background: 'rgba(55, 65, 81, 1)' }, { color: 'rgba(75, 85, 99, 1)', background: 'rgba(229, 231, 235, 1)' });
-    toggleClassAndStyle(document.querySelectorAll('.columns_piece'), 'dark-theme', { background: 'rgba(17, 24, 39, 1)', boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.15)' }, { background: 'rgba(255, 255, 255, 1)' })
+    toggleClassAndStyle(document.querySelectorAll('.columns_piece'), 'dark-theme', { background: 'rgb(45 94 200)', boxShadow: '2px 2px 2px 2px rgba(0, 0, 0, 0.15)' }, { background: 'rgba(255, 255, 255, 1)' })
     toggleClassAndStyle(document.querySelectorAll('.project_image'), 'dark-theme', { background: 'rgba(55, 65, 81, 1)' }, { background: 'rgb(243, 244, 246)' })
-    toggleClassAndStyle(document.querySelectorAll('.projects_text'), 'dark-theme', { background: 'rgba(31, 41, 55, 1)' }, { background: 'rgb(255, 255, 255)' })
+    toggleClassAndStyle(document.querySelectorAll('.projects_text'), 'dark-theme', { background: 'rgba(37 45 55)' }, { background: 'rgb(255, 255, 255)' })
     
     if (isDarkTheme) {
       desktopLightModeDiv.style.display = 'none';
